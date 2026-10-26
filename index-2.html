@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>B2B Acquisition Engine | B2B Outbound That You Own</title>
+<meta name="description" content="Complete B2B outbound leadgen across email, LinkedIn and WhatsApp. You approve, we handle the other 95%. The machine stays yours.">
+<meta name="author" content="Milan Obetko">
+<link rel="canonical" href="https://b2b-acquisition-engine.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://b2b-acquisition-engine.com/">
+<meta property="og:image" content="https://b2b-acquisition-engine.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:title" content="B2B Acquisition Engine | B2B Outbound That You Own">
+<meta property="og:description" content="Complete B2B outbound leadgen across email, LinkedIn and WhatsApp. You approve, we handle the other 95%.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://b2b-acquisition-engine.com/og-image.png">
+<meta name="twitter:title" content="B2B Acquisition Engine | B2B Outbound That You Own">
+<meta name="twitter:description" content="Complete B2B outbound leadgen across email, LinkedIn and WhatsApp. You approve, we handle the other 95%.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23060606'/%3E%3Cpath d='M20 12l22 20-22 20' fill='none' stroke='%23C9E265' stroke-width='9' stroke-linejoin='miter'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#060606;
+  --card:#0F0E0C;
+  --card-line:rgba(255,255,255,.16);
+  --gold:#BE8A00;          /* fills, blocks, buttons */
+  --gold-text:#E8AE12;     /* gold used as text on black */
+  --white:#FFFFFF;
+  --text:#EDEDED;          /* body text on black */
+  --text-soft:#CFCFCF;     /* secondary text on black, still high contrast */
+  --max:1240px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  background:var(--bg);color:var(--text);
+  font-family:"Poppins",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:17px;line-height:1.6;font-weight:400;-webkit-font-smoothing:antialiased;
+  padding-left:env(safe-area-inset-left,0);padding-right:env(safe-area-inset-right,0);
+}
+a{color:inherit}
+h1,h2,h3{color:var(--white);font-weight:700;line-height:1.08;letter-spacing:-.02em}
+h1{font-size:clamp(2.6rem,7.6vw,5.6rem);font-weight:700;letter-spacing:-.04em;line-height:1.02}
+h2{font-size:clamp(2rem,4.6vw,3.4rem)}
+p{max-width:62ch}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(20px,5vw,64px)}
+section{padding:130px 0;border-top:1px solid rgba(255,255,255,.1)}
+.eyebrow{display:block;color:var(--gold-text);font-size:.76rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:40px}
+.g{color:var(--gold-text)}
+:focus-visible{outline:3px solid var(--gold-text);outline-offset:3px}
+
+.btn{
+  display:inline-block;background:var(--gold);color:#000;font-weight:700;font-size:.78rem;
+  letter-spacing:.16em;text-transform:uppercase;text-decoration:none;
+  padding:15px 26px;border:2px solid var(--gold);transition:background .15s,color .15s,border-color .15s;
+}
+.btn:hover{background:var(--gold-text);border-color:var(--gold-text)}
+.btn.ghost{background:transparent;color:var(--white);border-color:var(--card-line)}
+.btn.ghost:hover{border-color:var(--white);background:rgba(255,255,255,.06)}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;border-top:0;padding:40px 0 0}
+.hero::before{ /* subtle grid */
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.55;
+  background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size:64px 64px;
+  -webkit-mask-image:radial-gradient(ellipse at 70% 20%,#000 0,transparent 72%);mask-image:radial-gradient(ellipse at 70% 20%,#000 0,transparent 72%);
+}
+.hero::after{ /* amber glow */
+  content:"";position:absolute;right:-12%;top:-10%;width:620px;height:620px;pointer-events:none;
+  background:radial-gradient(closest-side,rgba(190,138,0,.28),transparent 70%);
+}
+.hero .wrap{position:relative;z-index:1}
+.chip{display:inline-block;border:1px solid var(--card-line);padding:11px 18px;color:var(--gold-text);font-size:.78rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
+.hero h1{margin-top:34px;max-width:none}
+.hero .sub{margin-top:44px;display:grid;gap:16px}
+.hero .sub p{font-size:clamp(1.1rem,2.2vw,1.45rem);color:#C4C4C4;font-weight:300}
+.hero .cta{margin-top:40px}
+.stats{margin-top:72px;border-top:1px solid rgba(255,255,255,.14);padding:34px 0 40px;display:flex;align-items:baseline;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.stats .nums{display:flex;gap:34px;flex-wrap:wrap;align-items:baseline}
+.stat{display:flex;align-items:baseline;gap:10px}
+.stat b{color:var(--gold-text);font-size:2.8rem;font-weight:700;line-height:1}
+.stat > span{color:var(--text-soft);font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+.stats .by{color:var(--text);font-size:.82rem}
+
+/* GOLD BLOCK */
+.goldwrap{padding:44px 0 0;border-top:1px solid rgba(255,255,255,.1)}
+.gold{background:var(--gold);color:#000;padding:64px 64px 72px;display:grid;grid-template-columns:1.6fr 1fr;gap:40px;align-items:center}
+.gold .eyebrow{color:#000;font-size:.66rem;margin-bottom:26px}
+.gold h2{color:#000;font-size:clamp(1.9rem,5.2vw,4.3rem);max-width:none;font-weight:800;letter-spacing:-.035em;line-height:1.02}
+.gold p{color:#000;font-weight:700;font-size:clamp(1.3rem,2.8vw,2.2rem);line-height:1.2;max-width:9.5em}
+.goldsec{padding:40px 0 110px;border-top:0}
+
+/* REACH */
+.h-cov{font-size:clamp(1.8rem,3.9vw,3rem)}
+.lead{color:#C4C4C4;font-size:clamp(1.1rem,2vw,1.4rem);font-weight:300;margin-top:30px}
+.reach{display:grid;grid-template-columns:1fr 1.15fr;gap:56px;margin-top:56px;align-items:start}
+.steps{display:grid;gap:26px}
+.steps div{display:grid;grid-template-columns:50px 1fr;gap:6px}
+.steps b{color:var(--gold-text);font-weight:600;font-size:1.2rem;line-height:1.2}
+.steps p{font-size:.92rem;color:var(--text)}
+.dots{display:grid;gap:18px}
+.dots .row{display:flex;justify-content:space-between;gap:12px;font-size:.66rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--white);margin-bottom:12px}
+.dots .row span:last-child{letter-spacing:0;text-transform:none;font-weight:400;color:var(--text-soft);font-size:.78rem}
+.sq{display:grid;grid-template-columns:repeat(16,minmax(0,19px));gap:6px;justify-content:end}
+.sq i{aspect-ratio:1;border:1px solid rgba(255,255,255,.22);border-radius:2px;display:block}
+.sq i.on{background:var(--gold);border-color:var(--gold)}
+.dots hr{border:0;border-top:1px solid rgba(255,255,255,.14);margin:6px 0}
+.big-note{margin-top:56px;font-size:1.2rem;font-weight:500;color:var(--white);max-width:34ch}
+
+/* SEQUENCE */
+.seqbox{display:grid;grid-template-columns:1fr 200px;gap:26px;margin-top:64px;align-items:center}
+.scroll{overflow-x:auto}
+.seq{width:100%;min-width:560px;border-collapse:collapse}
+.seq th{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-soft);font-weight:700;padding:0 0 14px;text-align:center;border-left:1px solid rgba(255,255,255,.16)}
+.seq th:first-child{border-left:0}
+.seq td{height:84px;text-align:center;border-top:1px solid rgba(255,255,255,.16);border-left:1px solid rgba(255,255,255,.16)}
+.seq td:first-child{border-left:0;text-align:left;font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--white);width:120px}
+.chev{width:36px;height:36px;fill:var(--gold)}
+.out{background:var(--gold);color:#000;font-weight:800;text-align:center;padding:30px 14px;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;line-height:1.25;position:relative}
+.out::before{content:"";position:absolute;left:-18px;top:50%;margin-top:-8px;border-left:9px solid var(--gold);border-top:8px solid transparent;border-bottom:8px solid transparent}
+.loop{margin-top:6px}
+.loop svg{display:block;width:calc(100% - 226px);height:90px;min-width:460px}
+.loop p{text-align:center;font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--text-soft);margin:-58px auto 0;max-width:none;width:calc(100% - 226px);min-width:460px;position:relative}
+.callout{border-left:3px solid var(--gold);padding:4px 0 4px 18px;margin-top:64px}
+.callout b{display:block;color:var(--white);font-size:1.05rem;font-weight:600}
+.callout span{color:var(--text-soft);font-size:.85rem}
+
+/* CARDS */
+.card{background:var(--card);border:1px solid var(--card-line);padding:26px 26px}
+.cardhead{font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--white);margin-bottom:18px;display:flex;justify-content:space-between;gap:12px}
+.cardhead em{font-style:normal;color:var(--gold-text);margin-right:6px}
+.cardhead.g1{color:var(--gold-text)}
+.cardhead.big span:last-child{font-size:1.6rem;letter-spacing:0;font-weight:600;line-height:1;text-transform:none}
+.axes{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:56px}
+.rows .r{display:grid;grid-template-columns:auto 1fr auto;gap:18px;padding:15px 0;border-top:1px solid rgba(255,255,255,.12);align-items:baseline}
+.rows.geo .r{grid-template-columns:1fr auto}
+.rows dt{font-weight:600;color:var(--white);font-size:.9rem}
+.rows dd{color:var(--text-soft);font-size:.8rem}
+.rows .tag{color:var(--gold-text);font-weight:700;font-size:.68rem;letter-spacing:.1em}
+.rows.geo dd{text-align:right}
+.constants{margin-top:24px;border:1px solid rgba(232,174,18,.55);background:rgba(190,138,0,.06);padding:24px 26px}
+.constants .cardhead{color:var(--gold-text)}
+.checks{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;font-size:.85rem;color:var(--text)}
+.checks li,.tick li{padding-left:22px;position:relative}
+.checks li::before,.tick li::before{content:"";position:absolute;left:0;top:.5em;width:10px;height:6px;border-left:2px solid var(--gold-text);border-bottom:2px solid var(--gold-text);transform:rotate(-45deg)}
+.small{font-size:.95rem;color:var(--text-soft);margin-top:30px}
+
+/* YOUR PART */
+.split{display:grid;grid-template-columns:1.8fr 1fr;gap:24px;margin-top:56px}
+.duties{display:grid;grid-template-columns:1fr 1fr;gap:26px 30px}
+.duties li{list-style:none;padding-left:24px;position:relative}
+.duties li::before{content:"";position:absolute;left:0;top:.55em;width:10px;height:6px;border-left:2px solid var(--gold-text);border-bottom:2px solid var(--gold-text);transform:rotate(-45deg)}
+.duties b{display:block;color:var(--white);font-weight:600;font-size:.9rem}
+.duties span{color:var(--text-soft);font-size:.8rem}
+.goldcard{background:var(--gold);color:#000;padding:26px}
+.goldcard .cardhead{color:#000}
+.goldcard .hrs{font-size:2.9rem;font-weight:700;line-height:1.1;margin:18px 0 4px}
+.goldcard .mo{font-size:.85rem;font-weight:700;margin-bottom:22px}
+.goldcard p{font-size:.85rem;font-weight:500;color:#000}
+
+/* FAST */
+.fast{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:56px}
+.fast .card{position:relative;padding:20px}
+.fast .card:not(:last-child)::after{content:"";position:absolute;right:-22px;top:50%;margin-top:-9px;width:10px;height:10px;border-top:3px solid var(--gold);border-right:3px solid var(--gold);transform:rotate(45deg)}
+.fast .when{display:block;color:var(--gold-text);font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:10px}
+.fast b{display:block;color:var(--white);font-size:.95rem;font-weight:600;margin-bottom:6px}
+.fast span.d{color:var(--text-soft);font-size:.8rem}
+
+/* RISK */
+.risks{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:56px}
+.risks .card{padding:22px 20px}
+.risks .n{color:var(--gold-text);font-weight:700;font-size:1.05rem;margin-bottom:12px;display:block}
+.risks b{display:block;color:var(--white);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px;font-weight:700;line-height:1.5}
+.risks p{font-size:.8rem;color:var(--text-soft)}
+.quote{margin-top:44px;color:var(--white);font-weight:500;font-size:1.1rem;line-height:1.5}
+
+/* CHANGE */
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:56px}
+.ba ul{list-style:none;display:grid;gap:14px;color:var(--text)}
+.ba .after{border-color:rgba(232,174,18,.65)}
+.after li{padding-left:24px;position:relative}
+.after li::before{content:"";position:absolute;left:0;top:.5em;width:10px;height:6px;border-left:2px solid var(--gold-text);border-bottom:2px solid var(--gold-text);transform:rotate(-45deg)}
+
+/* PROOF */
+.proof{display:grid;grid-template-columns:1.1fr 1fr;gap:24px;margin-top:56px}
+.res{display:grid;gap:8px}
+.res div{display:flex;align-items:baseline;gap:22px}
+.res b{color:var(--gold-text);font-size:2.2rem;font-weight:700;line-height:1.15;min-width:140px}
+.res span{color:var(--text-soft);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700}
+.proof hr{border:0;border-top:1px solid rgba(255,255,255,.14);margin:22px 0 16px}
+.proof .cap{font-size:.82rem;color:var(--text-soft)}
+.tick{list-style:none;display:grid;gap:16px;color:var(--white);font-weight:500;font-size:.95rem}
+.logos{margin-top:34px;color:var(--text);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;display:flex;flex-wrap:wrap;gap:10px 22px;max-width:none}
+.logos span{white-space:nowrap}
+.logos span+span::before{content:"·";color:var(--text-soft);margin-right:22px}
+
+/* CONTACT */
+.contact{padding:120px 0 90px;position:relative;overflow:hidden}
+.contact::before{content:"";position:absolute;left:-10%;top:-10%;width:700px;height:700px;background:radial-gradient(closest-side,rgba(190,138,0,.18),transparent 70%);pointer-events:none}
+.contact .wrap{position:relative}
+.contact h2{max-width:14ch;font-size:clamp(2.1rem,5vw,3.8rem)}
+.btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:44px}
+.contact .foot{margin-top:46px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between;color:var(--text);font-size:.78rem;gap:16px;flex-wrap:wrap}
+.who{display:grid;grid-template-columns:1.2fr 1fr;gap:50px;margin-top:56px;align-items:start}
+.who ul{list-style:none;display:grid;gap:18px;color:var(--text);font-size:.95rem}
+.who li{padding-left:22px;position:relative}
+.who li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;background:var(--gold-text);border-radius:50%}
+.next h3{font-size:1.7rem;margin:8px 0 12px;font-weight:700}
+.next p{font-size:.9rem;color:var(--text-soft)}
+.who-sec h2{font-size:clamp(1.8rem,3.6vw,2.7rem)}
+
+/* FOOTER */
+footer{border-top:1px solid rgba(255,255,255,.1);padding:56px 0 34px}
+.f-top{display:grid;grid-template-columns:1fr 1.1fr;gap:60px}
+.f-top h4{color:var(--white);font-size:.95rem;font-weight:600;margin-bottom:8px}
+.f-top p{font-size:.78rem;color:var(--text-soft)}
+details{border-top:1px solid rgba(255,255,255,.14)}
+details:last-child{border-bottom:1px solid rgba(255,255,255,.14)}
+summary{cursor:pointer;list-style:none;padding:16px 0;color:var(--white);font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;display:flex;justify-content:space-between}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold-text);font-size:1rem;line-height:1}
+details[open] summary::after{content:"-"}
+details .body{padding:0 0 18px;font-size:.82rem;color:var(--text-soft);display:grid;gap:10px}
+details .body p{max-width:none}
+details a{color:var(--white)}
+.copy{margin-top:40px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.7rem;color:var(--text-soft)}
+
+@media (max-width:980px){
+  .reach,.split,.proof,.who,.f-top,.axes,.ba{grid-template-columns:1fr}
+  .risks{grid-template-columns:1fr 1fr}
+  .fast{grid-template-columns:1fr 1fr}
+  .fast .card::after{display:none}
+  .seqbox{grid-template-columns:1fr}
+  .out{padding:22px}
+  .out::before{display:none}
+  .loop svg,.loop p{width:100%;min-width:0}
+  .loop{overflow:visible}
+  .gold{grid-template-columns:1fr;padding:40px 24px 44px}
+  .gold h2{font-size:clamp(1.8rem,8.4vw,2.6rem)}
+  .gold p{max-width:none}
+  .checks{grid-template-columns:1fr}
+}
+@media (max-width:620px){
+  body{font-size:16px}
+  section{padding:84px 0}
+  .eyebrow{margin-bottom:28px}
+  .h-br br{display:none}
+  .seq{min-width:0}
+  .seq th{font-size:.52rem;letter-spacing:.08em}
+  .seq td{height:60px}
+  .seq td:first-child{width:76px;font-size:.55rem;letter-spacing:.1em}
+  .chev{width:24px;height:24px}
+  .sq{grid-template-columns:repeat(16,minmax(0,1fr));gap:3px}
+  .wrap{padding:0 20px}
+  .hero{padding-top:44px}
+  .risks,.fast,.duties{grid-template-columns:1fr}
+  .stats{margin-top:48px}
+  .stats .nums{gap:22px}
+  .rows .r{grid-template-columns:1fr auto}
+  .rows:not(.geo) dd:not(.tag){grid-column:1 / -1;order:3;padding-top:0}
+  .sq{gap:3px}
+  .goldsec{padding-bottom:76px}
+  .logos span+span::before{display:none}
+  .logos{gap:8px 18px}
+}
+</style>
+<style>/* THEME: Lime Premium */
+body{font-family:var(--font-body)}
+h1,h2,h3,.stat b,.res b,.goldcard .hrs,.risks .n,.steps b{font-family:var(--font-head)}
+.eyebrow,.chip,.btn,.cardhead,summary,.seq th,.seq td:first-child,.stat > span,.res span,.logos,.dots .row span:first-child,.fast .when,.risks b,.out{font-family:var(--font-label)}
+.btn{color:var(--on-accent)}
+.btn:hover{background:var(--accent-hover);border-color:var(--accent-hover);color:var(--on-accent)}
+.btn.ghost{color:var(--white)}
+.hero::after{width:720px;height:720px;background:radial-gradient(closest-side,var(--glow),transparent 70%)}
+.contact::before{background:radial-gradient(closest-side,var(--glow2),transparent 70%)}
+.gold{background:var(--block-bg);color:var(--on-accent)}
+.gold .eyebrow,.gold h2,.gold p{color:var(--on-accent)}
+.out{background:var(--gold);color:var(--on-accent)}
+.goldcard{background:var(--block-bg);color:var(--on-accent)}
+.goldcard .cardhead,.goldcard p{color:var(--on-accent)}
+.loop svg{color:var(--gold)}
+.constants{border-color:var(--accent-line);background:var(--accent-tint)}
+.ba .after{border-color:var(--accent-line)}
+.hl{color:var(--hl)}
+:root{--bg:#0A0A0B;--card:#111113;--card-line:rgba(255,255,255,.16);--gold:#C9E265;--gold-text:#C9E265;--on-accent:#0A0A0B;--accent-hover:#DBEC9B;
+--glow:rgba(201,226,101,.09);--glow2:rgba(201,226,101,.05);--block-bg:#111113;--accent-line:rgba(201,226,101,.45);--accent-tint:rgba(201,226,101,.035);--hl:#C9E265;
+--font-head:"Space Grotesk",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--font-body:"Inter",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--font-label:"Space Grotesk",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+h1{font-weight:600;letter-spacing:-.055em}
+h2{font-weight:600;letter-spacing:-.04em}
+.btn,.chip,.card,.constants,.goldcard,.gold,.out{border-radius:0}
+/* promise block: dark card, lime only as top rule and closing line */
+.gold{background:var(--card);border:1px solid var(--card-line);border-top:3px solid var(--gold);color:#FFFFFF}
+.gold .eyebrow{color:var(--gold-text)}
+.gold h2{color:#FFFFFF;font-weight:600}
+.gold p{color:var(--gold-text)}
+/* your side card: dark with lime outline */
+.goldcard{background:var(--card);border:1px solid var(--accent-line);color:#FFFFFF}
+.goldcard .cardhead{color:#FFFFFF}
+.goldcard .cardhead span:last-child{color:var(--gold-text)}
+.goldcard .hrs{color:var(--gold-text)}
+.goldcard .mo{color:#FFFFFF}
+.goldcard p{color:var(--text)}
+/* weekly leads: outline instead of fill */
+.out{background:transparent;border:1.5px solid var(--gold);color:var(--gold-text)}
+.hero::after{opacity:.9}
+
+/* FONT: Jost */
+
+:root{--font-head:"Jost",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--font-body:"Jost",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--font-label:"Jost",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+body{font-size:18px}
+h1{font-weight:600;letter-spacing:-.04em}
+h2,.gold h2{font-weight:600;letter-spacing:-.025em}
+.eyebrow,.chip,.cardhead,summary,.seq th,.seq td:first-child,.stat > span,.res span,.logos,.dots .row span:first-child,.fast .when,.risks b,.out,.btn{font-weight:600}
+.hero .sub p,.lead{font-weight:400;color:#E4E4E4}
+
+/* FINAL */
+
+.inside{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:56px}
+.inside .card{padding:24px}
+.inside .n{display:block;color:var(--gold-text);font-weight:700;font-size:1.05rem;margin-bottom:12px}
+.inside b{display:block;color:var(--white);font-size:1.05rem;font-weight:600;margin-bottom:8px}
+.inside p{font-size:.9rem;color:var(--text)}
+.proof{grid-template-columns:1fr}
+.proof .res{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.creds{margin-top:48px}
+.creds h3{font-size:clamp(1.4rem,2.6vw,2rem);font-weight:600;letter-spacing:-.02em}
+.creds .lead2{color:var(--text);margin-top:12px;max-width:70ch;font-size:1rem}
+.cred-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:24px}
+.cred-grid p{font-size:.95rem;color:var(--text)}
+.fit{margin-top:24px}
+.fit .tick{grid-template-columns:1fr 1fr}
+.refs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:24px}
+.refs figure{margin:0;display:flex;flex-direction:column;gap:16px}
+.refs blockquote{margin:0;color:var(--white);font-size:.98rem;line-height:1.5;flex:1}
+.refs blockquote::before{content:"\201C";display:block;color:var(--gold-text);font-size:2.2rem;line-height:.6;margin-bottom:10px}
+.refs figcaption b{display:block;color:var(--gold-text);font-size:.9rem}
+.refs figcaption span{color:var(--text);font-size:.8rem}
+@media (max-width:980px){.inside,.refs{grid-template-columns:1fr 1fr}.cred-grid{grid-template-columns:1fr}}
+@media (max-width:620px){.inside,.refs,.fit .tick,.proof .res{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <span class="chip">B2B Acquisition Engine</span>
+    <h1>Own the system,<br>that opens new<br><span class="hl">markets.</span></h1>
+    <div class="sub">
+      <p>We build &amp; operate B2B acquisition.</p>
+      <p>The machine stays yours.</p>
+      <p>You approve. We handle the other 95%.</p>
+    </div>
+    <div class="cta"><a class="btn" href="#contact">Interested?</a></div>
+    <div class="stats">
+      <div class="nums">
+        <div class="stat"><b><span class="count" data-to="20">0</span>+</b><span>Years</span></div>
+        <div class="stat"><b><span class="count" data-to="15">0</span>+</b><span>Markets</span></div>
+        <div class="stat"><b><span class="count" data-to="200">0</span>+</b><span>Projects</span></div>
+      </div>
+      <div class="by">M&amp;O, s.r.o. · Milan Obetko</div>
+    </div>
+  </div>
+</section>
+
+<!-- GOLD PROMISE -->
+<section class="goldwrap goldsec" style="padding-top:40px">
+  <div class="wrap">
+    <div class="gold">
+      <div>
+        <span class="eyebrow">For companies where one deal is worth it</span>
+        <h2>We'll build you a<br>machine that<br>gets you<br>meetings with<br>new, qualified<br>customers.</h2>
+      </div>
+      <p>You approve. We handle the other 95%.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REACH -->
+<section id="reach">
+  <div class="wrap">
+    <span class="eyebrow">How we reach the market</span>
+    <h2 class="h-br">We can reach your entire <br>target market.</h2>
+    <p class="lead">Every relevant company.<br>Every relevant decision-maker.</p>
+    <div class="reach">
+      <div class="steps">
+        <div><b>01</b><p>We map the market. We build the lists and enrich the data. We don't buy a database.</p></div>
+        <div><b>02</b><p>We find the decision maker whenever possible, not just info@ generic emails. We personalise whenever relevant.</p></div>
+        <div><b>03</b><p>We go through the whole list. Then again.</p></div>
+      </div>
+      <div class="dots">
+        <div>
+          <div class="row"><span>Today</span><span>Whoever happens to respond.</span></div>
+          <div class="sq" id="sqToday" aria-hidden="true"></div>
+        </div>
+        <hr>
+        <div>
+          <div class="row"><span>With this system</span><span>Everyone who belongs in the segment.</span></div>
+          <div class="sq" id="sqSystem" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+    <p class="big-note">Your competitors talk to whoever happens to respond. <span class="g">You talk to everyone who could buy from you.</span></p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="wrap">
+    <span class="eyebrow">How it works</span>
+    <h2 class="h-br">Continuous multi-<br>channel, multi-sequence <br>acquisition.</h2>
+    <div class="seqbox">
+      <div class="scroll">
+        <table class="seq" aria-label="Four-week multi-channel sequence">
+          <thead><tr><th></th><th>Week 1</th><th>Week 2</th><th>Week 3</th><th>Week 4</th></tr></thead>
+          <tbody>
+            <tr><td>E-mail</td><td class="c"></td><td class="c"></td><td class="c"></td><td class="c"></td></tr>
+            <tr><td>LinkedIn</td><td class="c"></td><td class="c"></td><td class="c"></td><td></td></tr>
+            <tr><td>WhatsApp</td><td></td><td></td><td class="c"></td><td class="c"></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="out">Weekly<br>qualified<br>leads</div>
+    </div>
+    <div class="loop">
+      <svg viewBox="0 0 1000 90" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M980 6 C 980 62, 930 74, 860 74 L 140 74 C 70 74, 20 62, 20 26" fill="none" stroke="currentColor" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+        <path d="M6 28 L20 4 L34 28 Z" fill="currentColor"/>
+      </svg>
+      <p>Ongoing system of repeatable campaigns</p>
+    </div>
+    <div class="callout">
+      <b>No additional media budget required.</b>
+      <span>No paid Meta or Google campaigns needed to reach the right decision makers.</span>
+    </div>
+  </div>
+</section>
+
+<!-- INSIDE -->
+<section id="inside">
+  <div class="wrap">
+    <span class="eyebrow">What's inside the engine</span>
+    <h2 class="h-br">Six parts of <br>one B2B machine.</h2>
+    <p class="lead">Each part feeds the next: traffic to lead, lead to pipeline, pipeline to partner and repeat order.</p>
+    <div class="inside"><div class="card"><span class="n">01</span><b>Acquisition engine</b><p>Positioning, messaging, demand engine and the stack behind it. Built per segment and market.</p></div><div class="card"><span class="n">02</span><b>Lead-gen campaigns</b><p>Profit-based campaign optimisation. +260% leads in year 1, +120% on top in year 2.</p></div><div class="card"><span class="n">03</span><b>Outreach &amp; lead-gen destinations</b><p>Dedicated landing destinations per segment and market, built end to end.</p></div><div class="card"><span class="n">04</span><b>Partner programs</b><p>B2B partner programs with wholesale and distribution routes on top.</p></div><div class="card"><span class="n">05</span><b>Sales pipeline</b><p>Sales process redesign with automation and AI, attribution and funnel optimisation.</p></div><div class="card"><span class="n">06</span><b>CRM</b><p>Built alongside the sales process, not bolted on after it.</p></div></div>
+  </div>
+</section>
+
+<!-- COVERAGE -->
+<section id="coverage">
+  <div class="wrap">
+    <span class="eyebrow">Coverage</span>
+    <h2 class="h-cov h-br">The system scales on two <br>independent axes - you set the scope, <br>nothing else changes</h2>
+    <div class="axes">
+      <div class="card">
+        <div class="cardhead"><span><em>1</em>Segment - who you want to reach</span></div>
+        <dl class="rows">
+          <div class="r"><dt>Industry</dt><dd>Manufacturing, SaaS, energy, services...</dd><dd class="tag">ANY</dd></div>
+          <div class="r"><dt>Company size</dt><dd>SMB, mid-market, enterprise</dd><dd class="tag">ANY</dd></div>
+          <div class="r"><dt>Buyer persona</dt><dd>Owner, C-level, procurement, technical lead</dd><dd class="tag">ANY</dd></div>
+          <div class="r"><dt>Business model</dt><dd>B2B, B2B2C, channel and partner sales</dd><dd class="tag">ANY</dd></div>
+        </dl>
+      </div>
+      <div class="card">
+        <div class="cardhead"><span><em>2</em>Geography - how far you want to go</span></div>
+        <dl class="rows geo">
+          <div class="r"><dt>Single Market</dt><dd>1 country</dd></div>
+          <div class="r"><dt>CEE</dt><dd>8-10 countries</dd></div>
+          <div class="r"><dt>DACH</dt><dd>3 countries, 100M+ people</dd></div>
+          <div class="r"><dt>EU</dt><dd>27 countries</dd></div>
+          <div class="r"><dt>US + ME</dt><dd>2 regions</dd></div>
+          <div class="r"><dt>Global</dt><dd>going global</dd></div>
+        </dl>
+      </div>
+    </div>
+    <p class="small">Scope is additive: start in one market, extend without rebuilding.</p>
+    <div class="constants">
+      <div class="cardhead"><span>Constant in every combination</span></div>
+      <ul class="checks">
+        <li>Market mapped, lists built, data enriched, not bought</li>
+        <li>3 channels × 4 weeks × 12 rounds</li>
+        <li>Phased milestones, exit anytime</li>
+      </ul>
+    </div>
+    <p class="big-note" style="max-width:none">Segment × geography = the only two decisions you make. <span class="g">Both are reversible.</span></p>
+  </div>
+</section>
+
+<!-- YOUR PART -->
+<section id="your-part">
+  <div class="wrap">
+    <span class="eyebrow">Your part</span>
+    <h2>95% is on us.<br>Four hours a month is on you.</h2>
+    <p class="lead" style="font-size:1rem">We run the machine. You approve direction and close the deals it brings.</p>
+    <div class="split">
+      <div class="card">
+        <div class="cardhead g1 big"><span>We handle</span><span class="g">95%</span></div>
+        <ul class="duties">
+          <li><b>Who we target</b><span>Market and company selection.</span></li>
+          <li><b>Contact database</b><span>Sourced and verified.</span></li>
+          <li><b>Technical setup</b><span>So the emails actually land.</span></li>
+          <li><b>Email, LinkedIn, WhatsApp</b><span>Written, tested, sent.</span></li>
+          <li><b>Replies</b><span>We answer every one.</span></li>
+          <li><b>Meeting handoff</b><span>Booked and briefed.</span></li>
+        </ul>
+      </div>
+      <div class="goldcard">
+        <div class="cardhead big"><span>Your side</span><span>Max 5%</span></div>
+        <div class="hrs">max 4 hrs</div>
+        <div class="mo">a month, across four calls</div>
+        <p>You approve the plan.<br>You show up to meetings.<br>You close the deal.</p>
+      </div>
+    </div>
+    <p class="small">Four calls a month, plus a short technical check-in whenever your call is needed.</p>
+  </div>
+</section>
+
+<!-- HOW FAST -->
+<section id="speed">
+  <div class="wrap">
+    <span class="eyebrow">How fast</span>
+    <h2>Database within 72 hours.<br>Campaign live within 3-5 weeks.</h2>
+    <div class="fast">
+      <div class="card"><span class="when">72 hours</span><b>Analysis and prep</b><span class="d">Market selected. Company database ready.</span></div>
+      <div class="card"><span class="when">10 days</span><b>Tech and contacts</b><span class="d">Domains set up. Contacts still being added.</span></div>
+      <div class="card"><span class="when">3-5 weeks</span><b>Ramp-up and launch</b><span class="d">Messages go out. Nothing is rushed.</span></div>
+      <div class="card"><span class="when">Ongoing</span><b>Running and scaling</b><span class="d">Numbers booked. Reported every month.</span></div>
+    </div>
+    <p class="big-note" style="max-width:none">You're not experimenting. You're repeating what already worked.</p>
+  </div>
+</section>
+
+<!-- RISK -->
+<section id="risk">
+  <div class="wrap">
+    <span class="eyebrow">What's at risk</span>
+    <h2>You can't lose.<br>What we build stays yours.</h2>
+    <div class="risks">
+      <div class="card"><span class="n">01</span><b>Phased milestones</b><p>Miss a milestone, payment stops. You only pay for what's actually delivered and working - not for promises.</p></div>
+      <div class="card"><span class="n">02</span><b>Leave anytime</b><p>30-day notice, no lock-in. You can walk away anytime, no penalties and no commitment to a further term.</p></div>
+      <div class="card"><span class="n">03</span><b>You own everything</b><p>Domains, data, sequences and playbook stay yours from day one. Nothing is locked inside us or our tools.</p></div>
+      <div class="card"><span class="n">04</span><b>Tied to results</b><p>Success fee is paid only when the system actually delivers booked, qualified meetings - not for activity.</p></div>
+      <div class="card"><span class="n">05</span><b>Handed over properly</b><p>We train your people to run it forward. Every process documented. Domains, data and campaigns stay with you.</p></div>
+    </div>
+    <p class="quote">What we build stays yours.<br>When something isn't working, I'll tell you before you ask.</p>
+  </div>
+</section>
+
+<!-- WHAT CHANGES -->
+<section id="change">
+  <div class="wrap">
+    <span class="eyebrow">What changes</span>
+    <h2>Your sales team stops hunting.<br>It shows up and closes.</h2>
+    <div class="ba">
+      <div class="card">
+        <div class="cardhead"><span>Before</span></div>
+        <ul><li>Reps chasing lists</li><li>Pipeline from who they know</li><li>Good months, silent months</li></ul>
+      </div>
+      <div class="card after">
+        <div class="cardhead g1"><span>After</span></div>
+        <ul class="after"><li>Market mapped, top to bottom</li><li>Qualified conversations in pipeline</li><li>Sales closes instead of hunting</li></ul>
+      </div>
+    </div>
+    <p class="small">Coverage of your market by design, not by who you happen to know.</p>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section id="proof">
+  <div class="wrap">
+    <span class="eyebrow">Proof &amp; fit</span>
+    <h2>One right client covers the entire system.</h2>
+    <div class="proof">
+      <div class="card">
+        <div class="cardhead g1"><span>It's already been done</span></div>
+        <div class="res">
+          <div><b>9x</b><span>Profit</span></div>
+          <div><b>+260%</b><span>Leads</span></div>
+          <div><b>+600%</b><span>POAS</span></div>
+        </div>
+        <hr>
+        <p class="cap">A full B2B2C transformation across CEE and DACH. Not outbound alone.</p>
+      </div>
+    </div>
+    <div class="creds">
+      <h3>B2B and B2B2C, from franchise to wholesale</h3>
+      <p class="lead2">Twenty years selling to businesses: franchise owners, enterprise clients, installers and distributors. Multi-market teams of 30+ and 30+ agency partnerships.</p>
+      <div class="cred-grid"><div class="card"><div class="cardhead g1"><span>01 &#183; MediaCom / WPP &#183; 2010-2015</span></div><p>Strategy Director, Head of Insight &amp; Beyond Advertising. 200+ integrated B2B and B2C strategies for P&amp;G, Tesco, Coca-Cola, Shell, Danone, UniCredit. Agency #5 to #3, +50% billing, two divisions built from scratch.</p></div><div class="card"><div class="cardhead g1"><span>02 &#183; Subway &#183; 2019-2022</span></div><p>Marketing Director CEE, 13 markets. B2B2C franchise demand: ABM at franchise owners and prospects, trade fairs, live broadcasts, executive sessions, proof-asset library for the sales cycle. CEE +10pts above global.</p></div><div class="card"><div class="cardhead g1"><span>03 &#183; Edimo &#183; 2024-2025</span></div><p>Marketing &amp; Commercial Growth Director, CEE &amp; DACH. Demand engine built from the ground up across 5 markets. Year 1: 9x profit, +600% POAS, +260% leads. Year 2: 3x profit on top.</p></div><div class="card"><div class="cardhead g1"><span>04 &#183; ONSA Plus &#183; 2025-2026</span></div><p>Head of Growth. European PV wholesale and technical-products e-commerce: 2x revenue in 12 months, 27 EU markets, six lead-gen destinations, B2B partner program.</p></div></div>
+    </div>
+    <div class="refs">
+      <figure class="card"><blockquote>Milan came with a lot of drive and vast expertise that helped restart the whole commercial part of the business. He was the driving force behind new markets expansion and lead generation boost.</blockquote><figcaption><b>Martin Karner</b><span>Senior Marketing Manager, Ecoprodukt &amp; Edimo</span></figcaption></figure>
+      <figure class="card"><blockquote>He constantly comes up with out-of-the-box solutions that are practical and executable. Thanks to his leadership approach, we accelerated time-to-market.</blockquote><figcaption><b>Martina Kov&#225;&#269;ov&#225;</b><span>Expansion Lead B2B &amp; B2C, DACH &amp; CEE, Edimo</span></figcaption></figure>
+      <figure class="card"><blockquote>Milan's data based strategy and execution led to strong growth trajectory. He proposed a new strategy which he executed and delivered consistent results during 2024 and 2025.</blockquote><figcaption><b>Filip Kraj&#269;</b><span>Purchase and Logistic Director, Ecoprodukt &amp; Edimo</span></figcaption></figure>
+    </div>
+    <div class="card fit">
+      <div class="cardhead g1"><span>A good fit if</span></div>
+      <ul class="tick">
+        <li>Higher-value B2B and B2B2C deals</li>
+        <li>Manufacturers, tech companies, brands</li>
+        <li>Distributors, enterprise clients</li>
+        <li>Capacity to close new business</li>
+      </ul>
+    </div>
+    <div class="logos"><span>20+ Years</span><span>15+ Markets</span><span>200+ Projects</span><span>EDIMO</span><span>VW</span><span>Subway</span></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <span class="eyebrow">Let's talk</span>
+    <h2>Thousands of potential B2B partners don't know you yet. <span class="g">Let's change that.</span></h2>
+    <div class="btns">
+      <a class="btn" href="mailto:milan.obetko@gmail.com?subject=B2B%20Acquisition%20Engine%20-%2030-minute%20call">milan.obetko@gmail.com</a>
+      <a class="btn ghost" href="tel:+421911719998">+421 911 719 998</a>
+    </div>
+    <div class="foot"><span>M&amp;O, s.r.o. · Grow &amp; Prosper · Milan Obetko</span></div>
+  </div>
+</section>
+
+<!-- WHO -->
+<section class="who-sec">
+  <div class="wrap">
+    <span class="eyebrow">Who you'd be working with</span>
+    <h2>Milan Obetko - Growth Catalyst<br>for CEOs and Founders</h2>
+    <div class="who">
+      <ul>
+        <li>20+ years, 15+ markets across CEE &amp; DACH, 200+ GTM projects</li>
+        <li>3× International Marketing Lead / CMO, ex Agency Strategy Director</li>
+        <li>Latest: CEE &amp; DACH scale-up, year 1: 9× operating profit, +600% POAS</li>
+      </ul>
+      <div class="card next">
+        <span class="eyebrow" style="margin-bottom:6px">Next step</span>
+        <h3>30-minute call.</h3>
+        <p>Let's discuss your needs and ideal customer/partner profiles. No commitment.</p>
+        <div class="btns" style="margin-top:22px"><a class="btn" href="mailto:milan.obetko@gmail.com?subject=B2B%20Acquisition%20Engine%20-%2030-minute%20call">Book the call</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div>
+        <h4>Grow &amp; Prosper</h4>
+        <p>A brand of M&amp;O s. r. o.<br>B2B Acquisition Engine is a B2B acquisition service.</p>
+      </div>
+      <div>
+        <details>
+          <summary>Imprint</summary>
+          <div class="body">
+            <p><strong style="color:#fff">M&amp;O s. r. o.</strong><br>Na varte 2/e<br>831 01 Bratislava - Nové Mesto<br>Slovak Republic</p>
+            <p>Company ID: 56 489 323<br>VAT ID: SK2122326987<br>Commercial Register of the Municipal Court Bratislava III<br>Section Sro, Insert No. 181303/B</p>
+            <p>Managing Director: Milan Obetko<br><a href="mailto:milan.obetko@gmail.com">milan.obetko@gmail.com</a><br><a href="tel:+421911719998">+421 911 719 998</a></p>
+          </div>
+        </details>
+        <details>
+          <summary>Privacy &amp; Cookies</summary>
+          <div class="body">
+            <p>M&amp;O s. r. o. is the controller of personal data submitted through direct contact. We use your details only to respond to your enquiry, prepare requested proposals, and meet legal obligations. We do not sell personal data.</p>
+            <p>Data is retained only as long as necessary for the relevant communication or as required by law. You may request access, correction, deletion, restriction, or object to processing by emailing <a href="mailto:milan.obetko@gmail.com">milan.obetko@gmail.com</a>. You may also lodge a complaint with the Office for Personal Data Protection of the Slovak Republic.</p>
+            <p>This website does not intentionally use advertising or profiling cookies. Essential technical storage may be used where required for secure website operation.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Legal Notice</summary>
+          <div class="body">
+            <p>Website content is provided for general business information and does not constitute a binding offer, guarantee, or professional legal advice. The scope, deliverables, timing, and commercial terms of each engagement are defined in a separate written agreement.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2026 Grow &amp; Prosper (M&amp;O s. r. o.). All rights reserved.</span>
+      <span>B2B Acquisition Engine</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* chevrons in the sequence table */
+  var chev='<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h6l8 9-8 9H5l8-9z"/></svg>';
+  document.querySelectorAll('.seq td.c').forEach(function(td){td.innerHTML=chev;});
+
+  /* square grids */
+  function grid(id,onSet,all){
+    var el=document.getElementById(id); if(!el)return; var h='';
+    for(var i=0;i<64;i++){ h+='<i'+((all||onSet.indexOf(i)>-1)?' class="on"':'')+'></i>'; }
+    el.innerHTML=h;
+  }
+  grid('sqToday',[2,21,24,38,46,55,57,63],false);
+  grid('sqSystem',[],true);
+
+  /* stat counters */
+  var els=document.querySelectorAll('.count');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function run(el){
+    var to=+el.dataset.to,t0=null,dur=1300;
+    if(reduce){el.textContent=to;return;}
+    function step(ts){ if(!t0)t0=ts; var p=Math.min((ts-t0)/dur,1),e=1-Math.pow(1-p,3); el.textContent=Math.round(to*e); if(p<1)requestAnimationFrame(step); }
+    requestAnimationFrame(step);
+  }
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){run(x.target);io.unobserve(x.target);}});},{threshold:.4});
+    els.forEach(function(el){io.observe(el);});
+  }else{els.forEach(run);}
+})();
+</script>
+</body>
+</html>
