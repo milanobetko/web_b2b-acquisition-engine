@@ -382,9 +382,6 @@ details a{color:var(--white)}
 @media (max-width:620px){section{padding:84px 0}body{font-size:17px}}
 @media (max-width:360px){.hero h1{font-size:2.3rem}}
 
-@media (prefers-reduced-motion:reduce){
-  .chev{opacity:1;transform:none;transition:none}.playhead{display:none}.rail::after{width:100%;transition:none}.sqg i{transition:none}
-}
 </style>
 </head>
 <body>
@@ -910,7 +907,7 @@ details a{color:var(--white)}
 
 <script>
 (function(){
-  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reduce=false; /* animations run regardless of the OS "reduce motion" setting */
   var NS='http://www.w3.org/2000/svg';
 
   /* ---- hero engine: market grid, paths, pulses (two orientations) ---- */
