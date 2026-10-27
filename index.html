@@ -345,6 +345,33 @@ h2,.gold h2{font-weight:600;letter-spacing:-.025em}
 @media (max-width:620px){.inside,.refs,.fit .tick,.proof .res{grid-template-columns:1fr}}
 
 /* FINAL */
+.yourbrand{margin-top:48px;border:1.5px solid var(--gold);padding:18px 22px;display:flex;justify-content:space-between;gap:8px 16px;flex-wrap:wrap;align-items:baseline}
+.yourbrand b{color:var(--gold-text);font-size:1.05rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+.yourbrand span{color:var(--text)}
+.sat{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:16px}
+.sat .lbl{display:block;color:var(--gold-text);font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px}
+.sat ul{list-style:none;display:grid;gap:6px;font-size:.92rem;color:var(--text)}
+.sat .reserve{border-style:dashed}
+.note{margin-top:22px;color:var(--text);max-width:72ch;font-size:.98rem}
+.infra-head{margin-top:56px}
+.infra-head h3{font-size:clamp(1.3rem,2.4vw,1.8rem);font-weight:600;letter-spacing:-.02em}
+.infra-head p{margin-top:10px;color:var(--text)}
+.infra{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;margin-top:24px}
+.infra .n,.steps4 .n{display:block;color:var(--gold-text);font-weight:700;font-size:1.05rem;margin-bottom:10px}
+.infra b,.steps4 b{display:block;color:var(--white);font-size:1rem;font-weight:600;margin-bottom:8px}
+.infra p{font-size:.84rem;color:var(--text);line-height:1.55}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:56px}
+.cmp .big3{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:600;color:var(--white);line-height:1.1;margin-top:6px}
+.cmp .sub3{color:var(--text);font-size:.9rem;margin:6px 0 16px}
+.cmp p{font-size:.95rem;color:var(--text)}
+.cmp .sys{border-color:var(--accent-line);background:var(--accent-tint)}
+.cmp .sys .big3{color:var(--gold-text)}
+.steps4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:56px}
+.steps4 p{font-size:.9rem;color:var(--text)}
+.invest-cta{margin-top:40px;display:flex;flex-wrap:wrap;gap:20px 32px;align-items:center;justify-content:space-between}
+@media (max-width:980px){.sat,.steps4{grid-template-columns:1fr 1fr}.infra{grid-template-columns:1fr 1fr}.cmp{grid-template-columns:1fr}}
+@media (max-width:620px){.steps4,.infra{grid-template-columns:1fr}.sat{gap:10px}.sat .card{padding:16px}.sat ul{font-size:.85rem}}
+/* FINAL */
 .seq .opt-tag{display:block;font-size:.66rem;letter-spacing:.06em;color:var(--text-soft);font-weight:500;margin-top:4px;text-transform:none}
 .seq tr.opt .chev{fill:none;stroke:var(--gold);stroke-width:1.6}
 @media (max-width:620px){.seq .opt-tag{font-size:.5rem;letter-spacing:.02em}}</style>
@@ -420,6 +447,7 @@ h2,.gold h2{font-weight:600;letter-spacing:-.025em}
   <div class="wrap">
     <span class="eyebrow">How it works</span>
     <h2 class="h-br">Continuous multi-<br>channel, multi-sequence <br>acquisition.</h2>
+    <p class="lead">Not one email that falls flat. A sequence where every touch knows what came before.</p>
     <div class="seqbox">
       <div class="scroll">
         <table class="seq" aria-label="Four-week multi-channel sequence">
@@ -441,10 +469,29 @@ h2,.gold h2{font-weight:600;letter-spacing:-.025em}
       </svg>
       <p>Ongoing system of repeatable campaigns</p>
     </div>
+    <p class="small">Whoever doesn't respond on one channel gets a different message on the next.</p>
     <div class="callout">
       <b>No additional media budget required.</b>
       <span>No paid Meta or Google campaigns needed to reach the right decision makers.</span>
     </div>
+  </div>
+</section>
+
+<!-- HOW IT'S BUILT -->
+<section id="built">
+  <div class="wrap">
+    <span class="eyebrow">How it's built</span>
+    <h2 class="h-br">We build three more <br>brands around yours.</h2>
+    <p class="lead">For outreach to land like it's from a person, not a mass mailer, it needs its own network. We build it and keep it running.</p>
+    <div class="yourbrand"><b>Your brand</b><span>Domain, reputation, primary inbox. Untouched.</span></div>
+    <div class="sat"><div class="card"><span class="lbl">Satellite 01</span><ul><li>Own website</li><li>4 email personas</li><li>2 LinkedIn personas</li><li>1 business WhatsApp</li></ul></div><div class="card"><span class="lbl">Satellite 02</span><ul><li>Own website</li><li>4 email personas</li><li>2 LinkedIn personas</li><li>1 business WhatsApp</li></ul></div><div class="card"><span class="lbl">Satellite 03</span><ul><li>Own website</li><li>4 email personas</li><li>2 LinkedIn personas</li><li>1 business WhatsApp</li></ul></div><div class="card reserve"><span class="lbl">Reserve</span><ul><li>Own website</li><li>4 email personas</li><li>2 LinkedIn personas</li><li>1 business WhatsApp</li></ul></div></div>
+    <p class="note">Every satellite brand has its own website, its own email and LinkedIn personas and its own business WhatsApp. If anything breaks, the satellite goes down - never you. 12 mailboxes and 6 LinkedIn profiles in operation, a fourth satellite held in reserve. We run and monitor all of it.</p>
+    <div class="infra-head">
+      <h3>5 layers of infrastructure. You don't have to build any of it.</h3>
+      <p>A robust system of 20+ tools. Months to build. For you: three weeks to launch.</p>
+    </div>
+    <div class="infra"><div class="card"><span class="n">01</span><b>Domains &amp; DNS</b><p>Cloudflare, Porkbun, Mailpool</p></div><div class="card"><span class="n">02</span><b>Mailboxes &amp; sending</b><p>Google Workspace, Microsoft 365, Mailpool</p></div><div class="card"><span class="n">03</span><b>Database &amp; verification</b><p>Apollo.io, Cognism, Sales Navigator, Google Maps, Outscraper, Apify, PhantomBuster, Clay, Hunter, Million Verifier</p></div><div class="card"><span class="n">04</span><b>Campaigns</b><p>Smartlead, Expandi, Lemlist, WhatsApp Business API, Twilio</p></div><div class="card"><span class="n">05</span><b>Web, automation, monitoring</b><p>Lovable, Vercel, GitHub, Make.com, MailReach, Google Postmaster, MXToolbox, Spamhaus / SURBL, Notion, Claude</p></div></div>
+    <p class="small">We master every tool, can hand it over and can train your team on it.</p>
   </div>
 </section>
 
@@ -542,6 +589,19 @@ h2,.gold h2{font-weight:600;letter-spacing:-.025em}
   </div>
 </section>
 
+<!-- THE NUMBERS -->
+<section id="numbers">
+  <div class="wrap">
+    <span class="eyebrow">The numbers</span>
+    <h2 class="h-br">Cheaper than the salesperson <br>you're about to hire.</h2>
+    <div class="cmp">
+      <div class="card"><div class="cardhead"><span>Hire a salesperson</span></div><p class="big3">&#8364;45,000 to &#8364;70,000</p><p class="sub3">a year, fully loaded</p><p>Three months before they're up to speed. Tools and data on top. And when they leave, the contacts leave with them.</p></div>
+      <div class="card sys"><div class="cardhead g1"><span>This system</span></div><p class="big3">Live in 3-5 weeks</p><p class="sub3">then run for you every month</p><p>The entire system, plus 20 years of experience running it. 30-day notice. Success-based fee by agreement. Domains, data and campaigns stay yours.</p></div>
+    </div>
+    <p class="big-note" style="max-width:none">One closed deal usually pays for the whole first year.</p>
+  </div>
+</section>
+
 <!-- RISK -->
 <section id="risk">
   <div class="wrap">
@@ -614,6 +674,20 @@ h2,.gold h2{font-weight:600;letter-spacing:-.025em}
       </ul>
     </div>
     <div class="logos"><span>20+ Years</span><span>15+ Markets</span><span>200+ Projects</span><span>EDIMO</span><span>VW</span><span>Subway</span></div>
+  </div>
+</section>
+
+<!-- HOW WE WORK TOGETHER -->
+<section id="invest">
+  <div class="wrap">
+    <span class="eyebrow">How we work together</span>
+    <h2 class="h-br">Four steps. <br>No lock-in.</h2>
+    <div class="steps4"><div class="card"><span class="n">01</span><b>Diagnostics and strategy</b><p>Deal size, target market, margins. A straight answer before anything is built.</p></div><div class="card"><span class="n">02</span><b>Building and launching the system</b><p>Two months: satellite brands, data, sequences and launch.</p></div><div class="card"><span class="n">03</span><b>Managed growth</b><p>Monthly. We run the machine, numbers reported every month.</p></div><div class="card"><span class="n">04</span><b>Success fee</b><p>By agreement. Paid only when the system delivers booked, qualified meetings.</p></div></div>
+    <div class="invest-cta">
+      <p class="big-note" style="margin-top:0">Let's find out if this works for your market.</p>
+      <a class="btn" href="mailto:milan.obetko@gmail.com?subject=B2B%20Acquisition%20Engine%20-%2030-minute%20call">Book a consultation</a>
+    </div>
+    <p class="small">Tool licences and WhatsApp are billed separately, at cost.</p>
   </div>
 </section>
 
