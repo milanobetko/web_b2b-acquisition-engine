@@ -155,15 +155,18 @@ section{padding:120px 0}
 .lanes td:not(:first-child)::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:var(--line)}
 .lanes tr.opt td:not(:first-child)::before{background:none;border-top:1px dashed var(--line2)}
 .opt-tag{display:block;font-size:.66rem;letter-spacing:.04em;color:var(--soft);font-weight:500;margin-top:4px;text-transform:none}
-.chev{position:relative;width:34px;height:34px;fill:var(--lime);opacity:.22;transform:scale(.8);transition:opacity .35s,transform .35s}
-tr.opt .chev{fill:none;stroke:var(--lime);stroke-width:1.6}
+.chev{position:relative;z-index:1;width:34px;height:34px;fill:var(--lime);opacity:0;transform:translateX(-14px) scale(.6);transition:opacity .3s,transform .45s cubic-bezier(.2,1.4,.4,1)}
+.lanes td.c::after{content:"";position:absolute;left:0;top:50%;margin-top:-1px;height:2px;width:0;background:var(--lime);transition:width .8s linear}
+.lanes tr.opt td.c::after{height:0;background:none;border-top:2px dashed var(--lime)}
+.lanes.play td.c::after{width:100%}
 .lanes.play .chev{opacity:1;transform:none}
-.lanes.play td[data-w="1"] .chev{transition-delay:.35s}
-.lanes.play td[data-w="2"] .chev{transition-delay:1.15s}
-.lanes.play td[data-w="3"] .chev{transition-delay:1.95s}
-.lanes.play td[data-w="4"] .chev{transition-delay:2.75s}
+.lanes.play td[data-w="1"] .chev{transition-delay:.4s}
+.lanes.play td[data-w="2"]::after{transition-delay:.8s}.lanes.play td[data-w="2"] .chev{transition-delay:1.2s}
+.lanes.play td[data-w="3"]::after{transition-delay:1.6s}.lanes.play td[data-w="3"] .chev{transition-delay:2s}
+.lanes.play td[data-w="4"]::after{transition-delay:2.4s}.lanes.play td[data-w="4"] .chev{transition-delay:2.8s}
+.lanes.out .chev,.lanes.out td.c::after{transition-duration:.4s;transition-delay:0s}
 .playhead{position:absolute;top:30px;bottom:0;width:2px;background:var(--lime);left:140px;opacity:0;pointer-events:none}
-.lanes.play .playhead{animation:sweep 3.4s cubic-bezier(.4,0,.6,1) forwards}
+.lanes.play .playhead{animation:sweep 3.2s linear forwards}
 @keyframes sweep{0%{left:140px;opacity:1}92%{opacity:1}100%{left:calc(100% - 2px);opacity:0}}
 .leads{border:1.5px solid var(--lime);color:var(--lime);text-align:center;padding:30px 14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;line-height:1.25;transition:background .4s,color .4s}
 .lanes-wrap.lit .leads{background:var(--lime);color:var(--ink)}
@@ -211,15 +214,17 @@ tr.opt .chev{fill:none;stroke:var(--lime);stroke-width:1.6}
 /* ---------- rail (inside, speed, invest) ---------- */
 .rail{position:relative;margin-top:64px;display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:24px}
 .rail::before{content:"";position:absolute;left:0;right:0;top:15px;height:1px;background:var(--line2)}
-.rail::after{content:"";position:absolute;left:0;top:15px;height:2px;background:var(--lime);width:0;transition:width 1.8s cubic-bezier(.4,0,.2,1)}
+.rail::after{content:"";position:absolute;left:0;top:15px;height:2px;background:var(--lime);width:0;transition:width 1.8s linear}
 .rail.play::after{width:100%}
 .rail > div{position:relative;padding-top:48px}
-.rail .dot{position:absolute;z-index:2;top:0;left:0;width:32px;height:32px;display:flex;align-items:center;justify-content:center;background:var(--bg);border:1.5px solid var(--lime);color:var(--lime);font-size:.78rem;font-weight:600}
+.rail .dot{position:absolute;z-index:2;top:0;left:0;width:32px;height:32px;display:flex;align-items:center;justify-content:center;background:var(--bg);border:1.5px solid var(--lime);color:var(--lime);font-size:.78rem;font-weight:600;transition:background .35s,color .35s,transform .35s cubic-bezier(.2,1.4,.4,1)}
+.rail.play .dot{background:var(--lime);color:var(--ink);animation:dotpop .5s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes dotpop{0%{transform:scale(1)}40%{transform:scale(1.25)}100%{transform:scale(1)}}
 .rail .when{display:block;color:var(--lime);font-size:.74rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin-bottom:8px}
 .rail b{display:block;color:var(--white);font-size:1.05rem;font-weight:600;margin-bottom:8px;line-height:1.3}
 .rail p,.rail span.d{color:var(--text);font-size:.92rem;display:block}
 @media (max-width:980px){.rail{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:40px}.rail::before,.rail::after{display:none}}
-@media (max-width:620px){.rail{grid-template-columns:1fr;gap:28px;padding-left:46px}.rail::before{display:block;left:15px;right:auto;top:0;bottom:0;width:1px;height:auto}.rail > div{padding-top:0}.rail .dot{left:-46px}}
+@media (max-width:620px){.rail{grid-template-columns:1fr;gap:28px;padding-left:46px}.rail::before{display:block;left:15px;right:auto;top:0;bottom:0;width:1px;height:auto}.rail::after{display:block;left:15px;top:0;width:2px;height:0;transition:height 1.8s linear}.rail.play::after{width:2px;height:100%}.rail > div{padding-top:0}.rail .dot{left:-46px}}
 
 /* ---------- coverage ---------- */
 .axes{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;margin-top:56px}
@@ -243,8 +248,11 @@ tr.opt .chev{fill:none;stroke:var(--lime);stroke-width:1.6}
 
 /* ---------- your part ---------- */
 .split-bar{margin-top:56px;display:flex;height:72px;border:1.5px solid var(--lime)}
-.split-bar .we{flex:95;display:flex;align-items:center;padding:0 22px;color:var(--white);font-weight:600;letter-spacing:.06em}
-.split-bar .you{flex:5;background:var(--lime);min-width:26px}
+.split-bar .we{position:relative;flex:95;display:flex;align-items:center;padding:0 22px;color:var(--white);font-weight:600;letter-spacing:.06em}
+.split-bar .we::before{content:"";position:absolute;inset:0;background:rgba(201,226,101,.08);transform:scaleX(0);transform-origin:left;transition:transform 1.5s cubic-bezier(.4,0,.2,1)}
+.split-bar .we > span{position:relative}
+.split-bar .you{flex:5;background:var(--lime);min-width:26px;transform:scaleX(0);transform-origin:right;transition:transform .5s cubic-bezier(.2,1.3,.4,1) 1.4s}
+.split-bar.play .we::before,.split-bar.play .you{transform:none}
 .split-legend{display:flex;justify-content:space-between;gap:16px;margin-top:12px;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
 .split-legend span{color:var(--white)}
 .split-legend span b{color:var(--lime)}
@@ -313,6 +321,7 @@ tr.opt .chev{fill:none;stroke:var(--lime);stroke-width:1.6}
 .big9 .side div{display:flex;align-items:baseline;gap:16px;border-top:1px solid var(--line);padding-top:14px}
 .big9 .side b{color:var(--lime);font-size:clamp(2rem,4vw,3rem);font-weight:600;line-height:1;min-width:4ch}
 .big9 .side span{color:var(--white);font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+.big9 .side b span{color:inherit;font-size:inherit;letter-spacing:inherit;text-transform:none}
 .big9 .cap{grid-column:1 / -1;color:var(--text)}
 .creds{margin-top:96px}
 .creds h3{font-size:clamp(1.5rem,2.8vw,2.2rem)}
@@ -679,7 +688,7 @@ details a{color:var(--white)}
     <span class="eyebrow">Your part</span>
     <h2>95% is on us.<br>Four hours a month is on you.</h2>
     <p class="lead">We run the machine. You approve direction and close the deals it brings.</p>
-    <div class="split-bar" role="img" aria-label="We handle 95%, your side is at most 5%"><div class="we">We handle 95%</div><div class="you"></div></div>
+    <div class="split-bar" role="img" aria-label="We handle 95%, your side is at most 5%"><div class="we"><span>We handle <span class="count" data-to="95">0</span>%</span></div><div class="you"></div></div>
     <div class="split-legend"><span>We handle <b>95%</b></span><span>Your side <b>Max 5%</b></span></div>
     <div class="part">
       <ul class="duties">
@@ -776,10 +785,10 @@ details a{color:var(--white)}
     <span class="eyebrow">Proof &amp; fit</span>
     <h2>One right client covers the entire system.</h2>
     <div class="big9">
-      <div class="x">9x<small>Profit</small></div>
+      <div class="x"><span class="count" data-to="9">0</span>x<small>Profit</small></div>
       <div class="side">
-        <div><b>+260%</b><span>Leads</span></div>
-        <div><b>+600%</b><span>POAS</span></div>
+        <div><b>+<span class="count" data-to="260">0</span>%</b><span>Leads</span></div>
+        <div><b>+<span class="count" data-to="600">0</span>%</b><span>POAS</span></div>
       </div>
       <p class="cap">It's already been done. A full B2B2C transformation across CEE and DACH. Not outbound alone.</p>
     </div>
@@ -958,8 +967,39 @@ details a{color:var(--white)}
   document.querySelectorAll('.count').forEach(function(el){once(el,function(){count(el);},.4);});
   once(document.getElementById('sqSystem'),fillSystem,.4);
   var lanes=document.getElementById('lanes'), lw=document.getElementById('lanesWrap');
-  once(lanes,function(){lanes.classList.add('play');setTimeout(function(){lw.classList.add('lit');},reduce?0:3300);},.45);
-  document.querySelectorAll('.rail').forEach(function(r){once(r,function(){r.classList.add('play');},.3);});
+  /* lanes: fill + chevrons, repeats while in view (ongoing campaigns) */
+  var lanesVis=false, lanesT=null;
+  function lanesCycle(){
+    lanes.classList.remove('out');lanes.classList.add('play');
+    lanesT=setTimeout(function(){
+      lw.classList.add('lit');
+      lanesT=setTimeout(function(){
+        if(!lanesVis){lanesT=null;return;}
+        lanes.classList.add('out');lanes.classList.remove('play');lw.classList.remove('lit');
+        lanesT=setTimeout(lanesCycle,600);
+      },3000);
+    },3300);
+  }
+  if(lanes){
+    if('IntersectionObserver' in window){new IntersectionObserver(function(en){en.forEach(function(x){lanesVis=x.isIntersecting;if(lanesVis&&!lanesT)lanesCycle();});},{threshold:.45}).observe(lanes);}
+    else{lanes.classList.add('play');lw.classList.add('lit');}
+  }
+
+  /* rails: line fills, each step lights up when the line reaches it */
+  function railDelays(r){
+    var k=[].slice.call(r.children), rb=r.getBoundingClientRect(), cols=getComputedStyle(r).gridTemplateColumns.split(' ').length;
+    k.forEach(function(c,i){
+      var b=c.getBoundingClientRect(), f;
+      if(cols===1)f=(b.top-rb.top)/rb.height;
+      else if(cols>=k.length)f=(b.left-rb.left)/rb.width;
+      else f=i*0.12;
+      var d=c.querySelector('.dot');if(d){d.style.transitionDelay=(f*1.8).toFixed(2)+'s';d.style.animationDelay=(f*1.8).toFixed(2)+'s';}
+    });
+  }
+  document.querySelectorAll('.rail').forEach(function(r){once(r,function(){railDelays(r);r.classList.add('play');},.3);});
+
+  /* 95 / 5 split bar */
+  document.querySelectorAll('.split-bar').forEach(function(s){once(s,function(){s.classList.add('play');},.4);});
 
   /* ---- chapter nav + progress ---- */
   var links={};document.querySelectorAll('.chapnav a').forEach(function(a){links[a.dataset.ch]=a;});
