@@ -460,6 +460,98 @@ details a{color:var(--white)}
 .chapnav a{white-space:nowrap}
 @media (max-width:1240px){.chapnav a{padding:8px 8px}}
 @media (max-width:1180px){.chapnav{display:none}.bar.in .mark .nm{display:none}.bar.in .mark .now{display:inline}}
+
+/* ================= SHORT VERSION ================= */
+section{padding:88px 0}
+.hero{padding:56px 0 0}
+.hero .cta .btn.ghost{min-width:0}
+.stats{margin-top:48px}
+.fitband{padding:0 0 8px}
+.fitband .fit{margin-top:0}
+.sec-h{font-size:clamp(1.9rem,4vw,3.1rem)}
+.oneline{color:var(--lime);font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600;margin-top:18px;max-width:none}
+
+/* tabs */
+.tabs{display:flex;margin-top:40px;border-bottom:1px solid var(--line2);overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{appearance:none;-webkit-appearance:none;background:none;border:0;border-bottom:3px solid transparent;margin-bottom:-1px;color:var(--soft);font:600 .74rem var(--f);letter-spacing:.16em;text-transform:uppercase;padding:16px 20px;min-height:52px;white-space:nowrap;cursor:pointer;transition:color .2s,border-color .2s}
+.tabs button b{color:var(--lime);margin-right:8px;font-weight:600}
+.tabs button:hover{color:var(--white)}
+.tabs button[aria-selected="true"]{color:var(--white);border-bottom-color:var(--lime)}
+.panel{padding-top:44px;animation:pin .35s ease both}
+.panel[hidden]{display:none}
+@keyframes pin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.panel .reach,.panel .lanes-wrap,.panel .split-bar,.panel .ba{margin-top:36px}
+.panel .rail{margin-top:44px}
+.panel .pull{margin-top:44px}
+.tabnext{margin-top:36px;display:flex;justify-content:flex-end}
+.tabnext button{appearance:none;background:none;border:0;color:var(--lime);font:600 .74rem var(--f);letter-spacing:.16em;text-transform:uppercase;cursor:pointer;padding:12px 0;min-height:44px}
+@media (max-width:620px){.tabs button{padding:14px 14px;font-size:.68rem;letter-spacing:.12em}}
+
+/* quotes as one swipeable row */
+.cases-sec .quotes.qrow{display:flex;gap:40px;margin-top:64px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:22px;scrollbar-width:thin;scrollbar-color:var(--lime) rgba(255,255,255,.1)}
+.quotes.qrow figure{flex:0 0 min(340px,80vw);scroll-snap-align:start}
+.quotes.qrow::-webkit-scrollbar{height:3px}
+.quotes.qrow::-webkit-scrollbar-track{background:rgba(255,255,255,.1)}
+.quotes.qrow::-webkit-scrollbar-thumb{background:var(--lime)}
+.case{margin-top:36px}
+
+/* terms: 4 risks in one row */
+.terms-head{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:24px 56px;align-items:end}
+.terms-head .quote{color:var(--white);font-size:clamp(1.1rem,1.7vw,1.35rem);font-weight:500;line-height:1.45;border-left:3px solid var(--lime);padding-left:18px}
+.risks4{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;margin-top:48px}
+.risks4 li{border-top:1px solid var(--line2);padding-top:20px}
+.risks4 .n{display:block;color:var(--lime);font-size:1.8rem;font-weight:600;line-height:1;margin-bottom:14px}
+.risks4 b{display:block;color:var(--white);font-size:1.05rem;font-weight:600;margin-bottom:6px}
+.risks4 p{color:var(--text);font-size:.93rem}
+.steps-wrap{margin-top:80px}
+@media (max-width:980px){.terms-head{grid-template-columns:1fr}.risks4{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.risks4{grid-template-columns:1fr;gap:20px}}
+
+/* who, compact */
+.who{margin-top:0}
+.who-main h2{font-size:clamp(1.8rem,3.6vw,2.7rem)}
+.who-main .who-stats{margin-top:28px;padding:22px 0;border-bottom:1px solid var(--line)}
+.who-main ul{margin-top:26px}
+.who-main .lead2{color:var(--text);margin-top:22px;font-size:1rem}
+
+/* details: everything else, on demand */
+.deep details{border-top:1px solid var(--line2)}
+.deep details:last-child{border-bottom:1px solid var(--line2)}
+.deep summary{padding:26px 0;display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr) auto;gap:8px 24px;align-items:baseline;letter-spacing:0;text-transform:none;font-size:1rem}
+.deep summary .k{color:var(--lime);font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase}
+.deep summary .t{color:var(--white);font-size:clamp(1.1rem,2vw,1.45rem);font-weight:600;line-height:1.25;letter-spacing:-.01em}
+.deep summary::after{font-size:1.6rem;font-weight:300;align-self:center}
+.deep summary:hover .t{color:var(--lime)}
+.deep .dbody{padding:4px 0 64px}
+.deep .dbody > .lead:first-child{margin-top:0}
+.deep .axes,.deep .tl,.deep .orbit{margin-top:32px}
+.deep .ctl{margin-top:28px}
+.deep .stack-head{margin-top:64px}
+@media (max-width:760px){.deep summary{grid-template-columns:minmax(0,1fr) auto}.deep summary .k{grid-column:1 / -1}.deep summary .t{grid-column:1}.deep summary::after{grid-column:2;grid-row:2}}
+
+/* three ways to get in touch */
+.opts{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:16px;margin-top:32px;max-width:1040px}
+.opt{display:flex;flex-direction:column;gap:8px;padding:24px 26px;min-height:138px;border:1.5px solid var(--line2);color:var(--white);text-decoration:none;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--lime)}
+.opt .k{color:var(--lime);font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase}
+.opt b{font-size:clamp(1.15rem,1.8vw,1.4rem);font-weight:600;line-height:1.2;overflow-wrap:anywhere}
+.opt .d{color:var(--soft);font-size:.9rem;margin-top:auto}
+.opt.pri{background:var(--lime);border-color:var(--lime);color:var(--ink)}
+.opt.pri:hover{background:var(--lime-h);border-color:var(--lime-h)}
+.opt.pri .k,.opt.pri .d{color:var(--ink)}
+.contact{padding:104px 0 88px}
+.contact h2{font-size:clamp(2.2rem,5vw,4.2rem)}
+.invest-cta .btns{margin-top:0}
+@media (max-width:820px){.opts{grid-template-columns:1fr}.opt{min-height:0}}
+
+/* mobile dock: the three options, always one tap away */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;grid-template-columns:1.5fr 1fr 1fr;gap:8px;padding:8px 10px calc(8px + env(safe-area-inset-bottom,0px));background:rgba(10,10,11,.95);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-top:1px solid var(--line2);transform:translateY(110%);transition:transform .3s}
+.dock.show{transform:none}
+.dock .btn{min-height:46px;padding:10px 8px;font-size:.68rem;letter-spacing:.12em}
+@media (max-width:760px){.dock{display:grid}footer{padding-bottom:96px}}
+@media (max-width:480px){.hero .cta{gap:8px;flex-wrap:nowrap}.hero .cta .btn{padding:14px 14px;letter-spacing:.1em;font-size:.72rem;white-space:nowrap}.hero .cta .btn.ghost{flex:1}}
+@media (max-width:620px){section{padding:64px 0}.contact{padding:72px 0 64px}.steps-wrap{margin-top:56px}}
 </style>
 </head>
 <body>
@@ -467,15 +559,14 @@ details a{color:var(--white)}
 <header class="bar" id="bar">
   <div class="wrap">
     <a class="mark" href="#top" aria-label="B2B Acquisition Engine, back to top"><i></i><span class="nm">B2B Acquisition Engine</span><span class="now" id="nowCh" aria-hidden="true"></span></a>
-    <ul class="chapnav" aria-label="Chapters">
-      <li><a href="#ch1" data-ch="ch1"><b>01</b>Why</a></li>
-      <li><a href="#ch2" data-ch="ch2"><b>02</b>The engine</a></li>
-      <li><a href="#ch3" data-ch="ch3"><b>03</b>Proof</a></li>
-      <li><a href="#ch4" data-ch="ch4"><b>04</b>Your part</a></li>
-      <li><a href="#ch5" data-ch="ch5"><b>05</b>The system</a></li>
-      <li><a href="#ch6" data-ch="ch6"><b>06</b>Who</a></li>
+    <ul class="chapnav" aria-label="Sections">
+      <li><a href="#engine" data-ch="ch1"><b>01</b>The engine</a></li>
+      <li><a href="#proof" data-ch="ch2"><b>02</b>Proof</a></li>
+      <li><a href="#risk" data-ch="ch3"><b>03</b>What's at risk</a></li>
+      <li><a href="#who" data-ch="ch4"><b>04</b>Who</a></li>
+      <li><a href="#details" data-ch="ch5"><b>05</b>Details</a></li>
     </ul>
-    <a class="btn" href="mailto:milan.obetko@gmail.com?subject=B2B%20Acquisition%20Engine%20-%2030-minute%20call">Book the call</a>
+    <a class="btn" data-cal href="mailto:milan.obetko@gmail.com?subject=B2B%20Acquisition%20Engine%20-%2030-minute%20call">Book the call</a>
   </div>
   <div class="progress" id="progress" aria-hidden="true"></div>
 </header>
@@ -494,7 +585,11 @@ details a{color:var(--white)}
           <p><b>The engine stays yours.</b></p>
           <p>You approve. We handle the other 95%.</p>
         </div>
-        <div class="cta"><a class="btn" href="mailto:milan.obetko@gmail.com?subject=B2B%20Acquisition%20Engine%20-%2030-minute%20call">Book the call</a></div>
+        <div class="cta" id="heroCta">
+          <a class="btn" data-cal href="mailto:milan.obetko@gmail.com?subject=B2B%20Acquisition%20Engine%20-%2030-minute%20call">Book the call</a>
+          <a class="btn ghost" href="mailto:milan.obetko@gmail.com?subject=B2B%20Acquisition%20Engine%20-%2030-minute%20call">E-mail</a>
+          <a class="btn ghost" href="tel:+421911719998">Call</a>
+        </div>
       </div>
       <figure class="engine eh" role="img" aria-label="Diagram of the engine: the mapped market feeds three satellite brands, which run email, LinkedIn, WhatsApp and Messenger sequences that turn into qualified meetings. Your own brand stays untouched.">
         <svg viewBox="0 0 560 470" id="engH">
@@ -567,15 +662,8 @@ details a{color:var(--white)}
   </div>
 </section>
 
-<!-- PROMISE -->
-<section class="promise">
+<div class="fitband">
   <div class="wrap">
-    <div class="row">
-      <div>
-        <h2>We'll build you an <br>engine that gets you <br>meetings with new, <br>qualified customers.</h2>
-      </div>
-      <div class="pside">
-        <p>One closed deal can pay for the whole engine.</p>
     <div class="fit">
       <b>A good fit if</b>
       <ul class="tick">
@@ -585,147 +673,132 @@ details a{color:var(--white)}
         <li>Capacity to close new business</li>
       </ul>
     </div>
-      </div>
-    </div>
   </div>
-</section>
-
-<!-- CHAPTER 01 -->
-<div class="chapter" id="ch1" data-chapter="ch1">
-  <div class="wrap"><div class="ch-in"><span class="num" aria-hidden="true">01</span><div><h2>Why</h2><p>Reach &#183; What changes</p></div></div></div>
 </div>
 
-<!-- REACH -->
-<section id="reach" data-chapter="ch1">
+<!-- THE ENGINE: five views in one screen -->
+<section id="engine" data-chapter="ch1">
   <div class="wrap">
-    <span class="eyebrow">How we reach the market</span>
-    <h2>We can reach your entire <br>target market.</h2>
-    <p class="lead">Every relevant company.<br>Every relevant decision-maker.</p>
-    <div class="reach">
-      <ol class="steps">
-        <li><b>01</b><p>We map the market. We build the lists and enrich the data. We don't buy a database.</p></li>
-        <li><b>02</b><p>We find the decision maker whenever possible, not just info@ generic emails. We personalise whenever relevant.</p></li>
-        <li><b>03</b><p>We go through the whole list. Then again.</p></li>
-      </ol>
-      <div class="grids">
-        <div>
-          <div class="row"><span>Today</span><span>Whoever happens to respond.</span></div>
-          <div class="sqg" id="sqToday" aria-hidden="true"></div>
+    <span class="eyebrow">The engine</span>
+    <h2 class="sec-h">We'll build you an engine that gets you meetings with new, qualified customers.</h2>
+    <p class="oneline">One closed deal can pay for the whole engine.</p>
+
+    <div class="tabs" role="tablist" aria-label="The engine">
+      <button role="tab" id="t-reach" aria-controls="p-reach" aria-selected="true"><b>01</b>Reach</button>
+      <button role="tab" id="t-change" aria-controls="p-change" aria-selected="false" tabindex="-1"><b>02</b>What changes</button>
+      <button role="tab" id="t-how" aria-controls="p-how" aria-selected="false" tabindex="-1"><b>03</b>How it works</button>
+      <button role="tab" id="t-part" aria-controls="p-part" aria-selected="false" tabindex="-1"><b>04</b>Your part</button>
+      <button role="tab" id="t-speed" aria-controls="p-speed" aria-selected="false" tabindex="-1"><b>05</b>How fast</button>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p-reach" aria-labelledby="t-reach">
+      <h3 class="sub-h">We can reach your entire target market.</h3>
+      <p class="lead">Every relevant company.<br>Every relevant decision-maker.</p>
+      <div class="reach">
+        <ol class="steps">
+          <li><b>01</b><p>We map the market. We build the lists and enrich the data. We don't buy a database.</p></li>
+          <li><b>02</b><p>We find the decision maker whenever possible, not just info@ generic emails. We personalise whenever relevant.</p></li>
+          <li><b>03</b><p>We go through the whole list. Then again.</p></li>
+        </ol>
+        <div class="grids">
+          <div>
+            <div class="row"><span>Today</span><span>Whoever happens to respond.</span></div>
+            <div class="sqg" id="sqToday" aria-hidden="true"></div>
+          </div>
+          <div>
+            <div class="row"><span>With this system</span><span>Everyone who belongs in the segment.</span></div>
+            <div class="sqg" id="sqSystem" aria-hidden="true"></div>
+          </div>
         </div>
-        <div>
-          <div class="row"><span>With this system</span><span>Everyone who belongs in the segment.</span></div>
-          <div class="sqg" id="sqSystem" aria-hidden="true"></div>
+      </div>
+      <p class="pull">Your competitors talk to whoever happens to respond. <span class="g">You talk to everyone who could buy from you.</span></p>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p-change" aria-labelledby="t-change" hidden>
+      <h3 class="sub-h">Your sales team stops hunting.<br>It shows up and closes.</h3>
+      <div class="ba">
+        <div><h3>Before</h3><ul class="before"><li>Reps chasing lists</li><li>Pipeline from who they know</li><li>Good months, silent months</li></ul></div>
+        <div><h3>After</h3><ul class="tick" style="grid-template-columns:1fr;gap:14px;font-size:1.05rem"><li>Market mapped, top to bottom</li><li>Qualified conversations in pipeline</li><li>Sales closes instead of hunting</li></ul></div>
+      </div>
+      <p class="small">Coverage of your market by design, not by who you happen to know.</p>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p-how" aria-labelledby="t-how" hidden>
+      <h3 class="sub-h">Continuous multi-channel, multi-sequence acquisition.</h3>
+      <p class="lead">Not one email that falls flat. A sequence where every touch knows what came before.</p>
+      <div class="lanes-wrap" id="lanesWrap">
+        <div class="lanes" id="lanes">
+          <table aria-label="Four-week multi-channel sequence">
+            <thead><tr><th></th><th>Week 1</th><th>Week 2</th><th>Week 3</th><th>Week 4</th></tr></thead>
+            <tbody>
+              <tr><td>E-mail</td><td class="c" data-w="1"></td><td class="c" data-w="2"></td><td class="c" data-w="3"></td><td class="c" data-w="4"></td></tr>
+              <tr><td>LinkedIn</td><td class="c" data-w="1"></td><td class="c" data-w="2"></td><td class="c" data-w="3"></td><td></td></tr>
+              <tr><td>WhatsApp</td><td></td><td></td><td class="c" data-w="3"></td><td class="c" data-w="4"></td></tr>
+              <tr class="opt"><td>Messenger<span class="opt-tag">where it fits</span></td><td></td><td></td><td class="c" data-w="3"></td><td class="c" data-w="4"></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="leads">Weekly <br>qualified <br>leads</div>
+      </div>
+      <div class="loopline">
+        <svg viewBox="0 0 1000 90" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M980 6 C 980 62, 930 74, 860 74 L 140 74 C 70 74, 20 62, 20 26" fill="none" stroke="currentColor" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+          <path d="M6 28 L20 4 L34 28 Z" fill="currentColor"/>
+        </svg>
+        <p>Ongoing system of repeatable campaigns</p>
+      </div>
+      <p class="small">Whoever doesn't respond on one channel gets a different message on the next.</p>
+      <div class="callout">
+        <b>No additional media budget required.</b>
+        <span>No paid Meta or Google campaigns needed to reach the right decision makers.</span>
+      </div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p-part" aria-labelledby="t-part" hidden>
+      <h3 class="sub-h">95% is on us.<br>Four hours a month is on you.</h3>
+      <p class="lead">We run the engine. You approve direction and close the deals it brings.</p>
+      <div class="split-bar" role="img" aria-label="We handle 95%, your side is at most 5%"><div class="we"><span>We handle <span class="count" data-to="95">0</span>%</span></div><div class="you"></div></div>
+      <div class="split-legend"><span>We handle <b>95%</b></span><span>Your side <b>Max 5%</b></span></div>
+      <div class="part">
+        <ul class="duties">
+          <li><b>Who we target</b><span>Market and company selection.</span></li>
+          <li><b>Contact database</b><span>Sourced and verified.</span></li>
+          <li><b>Technical setup</b><span>So the emails actually land.</span></li>
+          <li><b>Email, LinkedIn, WhatsApp, Messenger</b><span>Written, tested, sent. Messenger where it fits.</span></li>
+          <li><b>Replies</b><span>We answer every one.</span></li>
+          <li><b>Meeting handoff</b><span>Booked and briefed.</span></li>
+        </ul>
+        <div class="yours">
+          <span class="k">Your side</span>
+          <div class="hrs">max 4 hrs</div>
+          <div class="mo">a month, across four calls</div>
+          <p>You approve the plan.<br>You show up to meetings.<br>You close the deal.</p>
         </div>
       </div>
+      <p class="small">Four calls a month, plus a short technical check-in whenever your call is needed.</p>
     </div>
-    <p class="pull">Your competitors talk to whoever happens to respond. <span class="g">You talk to everyone who could buy from you.</span></p>
-  </div>
-</section>
 
-<!-- WHAT CHANGES -->
-<section id="change" class="sec-line" data-chapter="ch1">
-  <div class="wrap">
-    <span class="eyebrow">What changes</span>
-    <h2>Your sales team stops hunting.<br>It shows up and closes.</h2>
-    <div class="ba">
-      <div><h3>Before</h3><ul class="before"><li>Reps chasing lists</li><li>Pipeline from who they know</li><li>Good months, silent months</li></ul></div>
-      <div><h3>After</h3><ul class="tick" style="grid-template-columns:1fr;gap:14px;font-size:1.05rem"><li>Market mapped, top to bottom</li><li>Qualified conversations in pipeline</li><li>Sales closes instead of hunting</li></ul></div>
-    </div>
-    <p class="small">Coverage of your market by design, not by who you happen to know.</p>
-  </div>
-</section>
-
-<!-- CHAPTER 02 -->
-<div class="chapter" id="ch2" data-chapter="ch2">
-  <div class="wrap"><div class="ch-in"><span class="num" aria-hidden="true">02</span><div><h2>The engine</h2><p>How it works &#183; Coverage</p></div></div></div>
-</div>
-
-<!-- HOW IT WORKS -->
-<section id="how" data-chapter="ch2">
-  <div class="wrap">
-    <span class="eyebrow">How it works</span>
-    <h2>Continuous multi-<br>channel, multi-sequence <br>acquisition.</h2>
-    <p class="lead">Not one email that falls flat. A sequence where every touch knows what came before.</p>
-    <div class="lanes-wrap" id="lanesWrap">
-      <div class="lanes" id="lanes">
-        <table aria-label="Four-week multi-channel sequence">
-          <thead><tr><th></th><th>Week 1</th><th>Week 2</th><th>Week 3</th><th>Week 4</th></tr></thead>
-          <tbody>
-            <tr><td>E-mail</td><td class="c" data-w="1"></td><td class="c" data-w="2"></td><td class="c" data-w="3"></td><td class="c" data-w="4"></td></tr>
-            <tr><td>LinkedIn</td><td class="c" data-w="1"></td><td class="c" data-w="2"></td><td class="c" data-w="3"></td><td></td></tr>
-            <tr><td>WhatsApp</td><td></td><td></td><td class="c" data-w="3"></td><td class="c" data-w="4"></td></tr>
-            <tr class="opt"><td>Messenger<span class="opt-tag">where it fits</span></td><td></td><td></td><td class="c" data-w="3"></td><td class="c" data-w="4"></td></tr>
-          </tbody>
-        </table>
+    <div class="panel" role="tabpanel" id="p-speed" aria-labelledby="t-speed" hidden>
+      <h3 class="sub-h">Database within 72 hours.<br>Campaign live within 3-5 weeks.</h3>
+      <div class="rail" style="--n:4">
+        <div><span class="dot">1</span><span class="when">72 hours</span><b>Analysis and prep</b><span class="d">Market selected. Company database ready.</span></div>
+        <div><span class="dot">2</span><span class="when">10 days</span><b>Tech and contacts</b><span class="d">Domains set up. Contacts still being added.</span></div>
+        <div><span class="dot">3</span><span class="when">3-5 weeks</span><b>Ramp-up and launch</b><span class="d">Messages go out. Nothing is rushed.</span></div>
+        <div><span class="dot">4</span><span class="when">Ongoing</span><b>Running and scaling</b><span class="d">Numbers booked. Reported every month.</span></div>
       </div>
-      <div class="leads">Weekly <br>qualified <br>leads</div>
+      <p class="pull" style="max-width:none">You're not experimenting. You're repeating what already worked.</p>
     </div>
-    <div class="loopline">
-      <svg viewBox="0 0 1000 90" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M980 6 C 980 62, 930 74, 860 74 L 140 74 C 70 74, 20 62, 20 26" fill="none" stroke="currentColor" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
-        <path d="M6 28 L20 4 L34 28 Z" fill="currentColor"/>
-      </svg>
-      <p>Ongoing system of repeatable campaigns</p>
-    </div>
-    <p class="small">Whoever doesn't respond on one channel gets a different message on the next.</p>
-    <div class="callout">
-      <b>No additional media budget required.</b>
-      <span>No paid Meta or Google campaigns needed to reach the right decision makers.</span>
-    </div>
+
+    <div class="tabnext"><button type="button" id="tabNext">Next &#8594;</button></div>
   </div>
 </section>
 
-<!-- COVERAGE -->
-<section id="coverage" class="sec-line" data-chapter="ch2">
-  <div class="wrap">
-    <span class="eyebrow">Coverage</span>
-    <h2>The engine scales on two <br>independent axes - you set the scope, <br>nothing else changes</h2>
-    <div class="axes">
-      <div>
-        <h3><em>1</em>Segment - who you want to reach</h3>
-        <dl class="seg">
-          <div class="r"><dt>Industry</dt><dd>Manufacturing, SaaS, energy, services...</dd><dd class="tag">ANY</dd></div>
-          <div class="r"><dt>Company size</dt><dd>SMB, mid-market, enterprise</dd><dd class="tag">ANY</dd></div>
-          <div class="r"><dt>Buyer persona</dt><dd>Owner, C-level, procurement, technical lead</dd><dd class="tag">ANY</dd></div>
-          <div class="r"><dt>Business model</dt><dd>B2B, B2B2C, channel and partner sales</dd><dd class="tag">ANY</dd></div>
-        </dl>
-      </div>
-      <div>
-        <h3><em>2</em>Geography - how far you want to go</h3>
-        <dl class="geo">
-          <div class="r"><dt>Single Market</dt><dd><i style="width:8%"></i>1 country</dd></div>
-          <div class="r"><dt>CEE</dt><dd><i style="width:24%"></i>8-10 countries</dd></div>
-          <div class="r"><dt>DACH</dt><dd><i style="width:30%"></i>3 countries, 100M+ people</dd></div>
-          <div class="r"><dt>EU</dt><dd><i style="width:46%"></i>27 countries</dd></div>
-          <div class="r"><dt>US + ME</dt><dd><i style="width:58%"></i>2 regions</dd></div>
-          <div class="r"><dt>Global</dt><dd><i style="width:70%"></i>going global</dd></div>
-        </dl>
-      </div>
-    </div>
-    <p class="small">Scope is additive: start in one market, extend without rebuilding.</p>
-    <div class="constants">
-      <b>Constant in every combination</b>
-      <ul class="checks">
-        <li>Market mapped, lists built, data enriched, not bought</li>
-        <li>3-4 channels × 4 weeks × 12 rounds</li>
-        <li>Phased milestones, exit anytime</li>
-      </ul>
-    </div>
-    <p class="pull" style="max-width:none">Segment × geography = the only two decisions you make. <span class="g">Both are reversible.</span></p>
-  </div>
-</section>
-
-<!-- CHAPTER 03 -->
-<div class="chapter" id="ch3" data-chapter="ch3">
-  <div class="wrap"><div class="ch-in"><span class="num" aria-hidden="true">03</span><div><h2>Proof</h2><p>Case studies &#183; References &#183; What's at risk &#183; How we work together</p></div></div></div>
-</div>
-
-<!-- PROOF: CASE STUDIES + REFERENCES -->
-<section id="proof" class="cases-sec" data-chapter="ch3">
+<!-- PROOF -->
+<section id="proof" class="cases-sec sec-line" data-chapter="ch2">
   <div class="wrap">
     <span class="eyebrow">Proof</span>
     <div class="cases">
-      <h2>Two companies. One method.</h2>
+      <h2 class="sec-h">Two companies. One method.</h2>
       <p class="lead2">Different industries, different price points. Strategy first, then a system that executes it whether anyone is in the office or not.</p>
       <article class="case">
         <div class="case-l">
@@ -748,11 +821,10 @@ details a{color:var(--white)}
       <article class="case nda">
         <div class="nda-l"><span class="case-k">Case study 02</span><h4>Client under NDA</h4></div>
         <ul class="nda-n"><li><b>2x</b><span>Revenue</span></li><li><b>+390%</b><span>Leads</span></li><li><b>12</b><span>Months</span></li></ul>
-        <div class="nda-r"><p>I'll walk you through this one on the call.</p><a class="btn" href="mailto:milan.obetko@gmail.com?subject=B2B%20Acquisition%20Engine%20-%2030-minute%20call">Book the call</a></div>
+        <div class="nda-r"><p>I'll walk you through this one on the call.</p><a class="btn" data-cal href="mailto:milan.obetko@gmail.com?subject=B2B%20Acquisition%20Engine%20-%2030-minute%20call">Book the call</a></div>
       </article>
-      <p class="cases-end">Neither of these was a campaign. Both started as a strategy and ended as a system.</p>
     </div>
-    <div class="quotes">
+    <div class="quotes qrow" tabindex="0" aria-label="References">
       <figure><blockquote>Excellent work. Most appreciated and well done in such a short timeframe.</blockquote><figcaption><b>Justin Goes</b><span>CEO, Subway Europe</span></figcaption></figure>
       <figure><blockquote>Success story and company turnaround. An exceptional asset for the company.</blockquote><figcaption><b>Honza Hanu&#353;</b><span>CEO, Yoplait CEE</span></figcaption></figure>
       <figure><blockquote>Key architect of our communication system - we are now selling better than ever before.</blockquote><figcaption><b>Marek Chovanec</b><span>Marketing Manager, VW Slovakia</span></figcaption></figure>
@@ -766,22 +838,24 @@ details a{color:var(--white)}
 
 <!-- RISK + HOW WE WORK TOGETHER -->
 <section id="risk" class="sec-line" data-chapter="ch3">
-  <div class="wrap risk-grid">
-    <div class="risk-side">
-      <span class="eyebrow">What's at risk</span>
-      <h2>You can't lose.<br>What we build stays yours.</h2>
+  <div class="wrap">
+    <div class="terms-head">
+      <div>
+        <span class="eyebrow">What's at risk</span>
+        <h2 class="sec-h">You can't lose.<br>What we build stays yours.</h2>
+      </div>
       <p class="quote">When something isn't working, I'll tell you before you ask.</p>
     </div>
-    <ol class="risks">
-      <li><span class="n">01</span><div><b>Phased milestones</b><p>Miss a milestone, payment stops. You only pay for what's actually delivered and working - not for promises.</p></div></li>
-      <li><span class="n">02</span><div><b>Leave anytime</b><p>30-day notice, no lock-in. You can walk away anytime, no penalties and no commitment to a further term.</p></div></li>
-      <li><span class="n">03</span><div><b>You own everything</b><p>Domains, data, sequences and playbook stay yours from day one. Nothing is locked inside us or our tools.</p></div></li>
-      <li><span class="n">04</span><div><b>Handed over properly</b><p>We train your people to run it forward. Every process documented. Domains, data and campaigns stay with you.</p></div></li>
+    <ol class="risks4">
+      <li><span class="n">01</span><b>Phased milestones</b><p>Miss a milestone, payment stops. You only pay for what's actually delivered and working - not for promises.</p></li>
+      <li><span class="n">02</span><b>Leave anytime</b><p>30-day notice, no lock-in. You can walk away anytime, no penalties and no commitment to a further term.</p></li>
+      <li><span class="n">03</span><b>You own everything</b><p>Domains, data, sequences and playbook stay yours from day one. Nothing is locked inside us or our tools.</p></li>
+      <li><span class="n">04</span><b>Handed over properly</b><p>We train your people to run it forward. Every process documented. Domains, data and campaigns stay with you.</p></li>
     </ol>
   </div>
   <div class="wrap steps-wrap" id="invest">
     <span class="eyebrow">How we work together</span>
-    <h3 class="sub-h">Four steps. <br>No lock-in.</h3>
+    <h3 class="sub-h">Four steps. No lock-in.</h3>
     <div class="rail" style="--n:4">
       <div><span class="dot">01</span><b>Diagnostics and strategy</b><p>Deal size, target market, margins. A straight answer before anything is built.</p></div>
       <div><span class="dot">02</span><b>Building and launching the system</b><p>Two months: satellite brands, data, sequences and launch.</p></div>
@@ -790,177 +864,166 @@ details a{color:var(--white)}
     </div>
     <div class="invest-cta">
       <p>Let's find out if this works for your market.</p>
-      <a class="btn" href="mailto:milan.obetko@gmail.com?subject=B2B%20Acquisition%20Engine%20-%2030-minute%20call">Book a consultation</a>
+      <div class="btns">
+        <a class="btn" data-cal href="mailto:milan.obetko@gmail.com?subject=B2B%20Acquisition%20Engine%20-%2030-minute%20call">Book a consultation</a>
+        <a class="btn ghost" href="mailto:milan.obetko@gmail.com?subject=B2B%20Acquisition%20Engine%20-%2030-minute%20call">E-mail</a>
+        <a class="btn ghost" href="tel:+421911719998">Call</a>
+      </div>
     </div>
     <p class="small">Tool licences and WhatsApp are billed separately, at cost.</p>
   </div>
 </section>
 
-<!-- CHAPTER 04 -->
-<div class="chapter" id="ch4" data-chapter="ch4">
-  <div class="wrap"><div class="ch-in"><span class="num" aria-hidden="true">04</span><div><h2>Your part</h2><p>Your part &#183; How fast &#183; The numbers</p></div></div></div>
-</div>
-
-<!-- YOUR PART -->
-<section id="your-part" data-chapter="ch4">
-  <div class="wrap">
-    <span class="eyebrow">Your part</span>
-    <h2>95% is on us.<br>Four hours a month is on you.</h2>
-    <p class="lead">We run the engine. You approve direction and close the deals it brings.</p>
-    <div class="split-bar" role="img" aria-label="We handle 95%, your side is at most 5%"><div class="we"><span>We handle <span class="count" data-to="95">0</span>%</span></div><div class="you"></div></div>
-    <div class="split-legend"><span>We handle <b>95%</b></span><span>Your side <b>Max 5%</b></span></div>
-    <div class="part">
-      <ul class="duties">
-        <li><b>Who we target</b><span>Market and company selection.</span></li>
-        <li><b>Contact database</b><span>Sourced and verified.</span></li>
-        <li><b>Technical setup</b><span>So the emails actually land.</span></li>
-        <li><b>Email, LinkedIn, WhatsApp, Messenger</b><span>Written, tested, sent. Messenger where it fits.</span></li>
-        <li><b>Replies</b><span>We answer every one.</span></li>
-        <li><b>Meeting handoff</b><span>Booked and briefed.</span></li>
-      </ul>
-      <div class="yours">
-        <span class="k">Your side</span>
-        <div class="hrs">max 4 hrs</div>
-        <div class="mo">a month, across four calls</div>
-        <p>You approve the plan.<br>You show up to meetings.<br>You close the deal.</p>
-      </div>
-    </div>
-    <p class="small">Four calls a month, plus a short technical check-in whenever your call is needed.</p>
-  </div>
-</section>
-
-<!-- HOW FAST -->
-<section id="speed" class="sec-line" data-chapter="ch4">
-  <div class="wrap">
-    <span class="eyebrow">How fast</span>
-    <h2>Database within 72 hours.<br>Campaign live within 3-5 weeks.</h2>
-    <div class="rail" style="--n:4">
-      <div><span class="dot">1</span><span class="when">72 hours</span><b>Analysis and prep</b><span class="d">Market selected. Company database ready.</span></div>
-      <div><span class="dot">2</span><span class="when">10 days</span><b>Tech and contacts</b><span class="d">Domains set up. Contacts still being added.</span></div>
-      <div><span class="dot">3</span><span class="when">3-5 weeks</span><b>Ramp-up and launch</b><span class="d">Messages go out. Nothing is rushed.</span></div>
-      <div><span class="dot">4</span><span class="when">Ongoing</span><b>Running and scaling</b><span class="d">Numbers booked. Reported every month.</span></div>
-    </div>
-    <p class="pull" style="max-width:none">You're not experimenting. You're repeating what already worked.</p>
-  </div>
-</section>
-
-<!-- THE NUMBERS -->
-<section id="numbers" class="sec-line" data-chapter="ch4">
-  <div class="wrap">
-    <span class="eyebrow">The numbers</span>
-    <h2>Cheaper than the salesperson <br>you're about to hire.</h2>
-    <div class="tl" role="img" aria-label="Timeline: a new salesperson needs three months to get up to speed, the system is live in 3-5 weeks">
-      <div class="axis"><span></span><div class="ticks"><span>Month 1</span><span>Month 2</span><span>Month 3</span></div></div>
-      <div class="track"><b>Hire a salesperson</b><div class="bars"><div class="ramp">Three months before they're up to speed</div></div></div>
-      <div class="track"><b>This system</b><div class="bars"><div class="build">Build</div><div class="live">Live in 3-5 weeks</div></div></div>
-    </div>
-    <div class="cmp">
-      <div><h3>Hire a salesperson</h3><p class="big3">&#8364;45,000 to &#8364;70,000</p><p class="sub3">a year, fully loaded</p><p>Three months before they're up to speed. Tools and data on top. And when they leave, the contacts leave with them.</p></div>
-      <div class="sys"><h3>This system</h3><p class="big3">Live in 3-5 weeks</p><p class="sub3">then run for you every month</p><p>The entire system, plus 20 years of experience running it. 30-day notice. Success-based fee by agreement. Domains, data and campaigns stay yours.</p></div>
-    </div>
-    <div class="btns"><a class="btn" href="mailto:milan.obetko@gmail.com?subject=B2B%20Acquisition%20Engine%20-%2030-minute%20call">Book the call</a></div>
-  </div>
-</section>
-
-<!-- CHAPTER 05 -->
-<div class="chapter" id="ch5" data-chapter="ch5">
-  <div class="wrap"><div class="ch-in"><span class="num" aria-hidden="true">05</span><div><h2>The system</h2><p>Beyond the engine &#183; How the engine is built &#183; Infrastructure</p></div></div></div>
-</div>
-
-<!-- BEYOND THE ENGINE -->
-<section id="beyond" data-chapter="ch5">
-  <div class="wrap">
-    <span class="eyebrow">Beyond the engine</span>
-    <h2>Revenue &amp; Profit Focused <br>Sales System</h2>
-    <p class="lead">End-to-end business development: from lead to maximising LTV.</p>
-    <p class="bridge">The engine books the meetings. The full system carries every lead through to repeat orders.</p>
-    <div class="rail sys" style="--n:6">
-      <div class="from"><span class="dot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h6l8 9-8 9H5l8-9z"/></svg></span><span class="when">The engine</span><b>Qualified meetings weekly</b></div>
-      <div><span class="dot">01</span><b>Lead segmentation via LPs</b><p>Data collection via forms (qualification)</p></div>
-      <div><span class="dot">02</span><b>Registration &amp; onboarding</b></div>
-      <div><span class="dot">03</span><b>Automation with periodic (or ad-hoc) promotions</b></div>
-      <div><span class="dot">04</span><b>Data collection - business intelligence</b></div>
-      <div><span class="dot">05</span><b>Cross-sell &amp; up-sell</b><p>Repeat purchase driven by tailored/segmented offers that increase LTV</p></div>
-    </div>
-    <div class="band">
-      <div class="bt"><span>Enrichment with friction for engagement, and AI tools/agents for automation</span><b>Human-driven &amp; AI-powered sales system</b></div>
-      <div class="bchev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h6l8 9-8 9H5l8-9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h6l8 9-8 9H5l8-9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h6l8 9-8 9H5l8-9z"/></svg></div>
-    </div>
-  </div>
-</section>
-
-<!-- HOW IT'S BUILT -->
-<section id="built" class="sec-line" data-chapter="ch5">
-  <div class="wrap">
-    <span class="eyebrow">How the engine is built</span>
-    <h2>We build three more <br>brands around yours.</h2>
-    <p class="lead">For outreach to land like it's from a person, not a mass mailer, it needs its own network. We build it and keep it running.</p>
-    <div class="orbit">
-      <svg class="spokes" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-        <line x1="50" y1="50" x2="22" y2="24"/><line x1="50" y1="50" x2="78" y2="24"/><line x1="50" y1="50" x2="22" y2="76"/><line class="d" x1="50" y1="50" x2="78" y2="76"/>
-      </svg>
-      <div class="core"><b>Your brand</b><span>Domain, reputation, primary inbox. Untouched.</span></div>
-      <div class="sat s1"><span class="lbl">Satellite 01</span><ul><li>Own website</li><li>4 email personas</li><li>2 LinkedIn personas</li><li>1 business WhatsApp</li></ul></div>
-      <div class="sat s2"><span class="lbl">Satellite 02</span><ul><li>Own website</li><li>4 email personas</li><li>2 LinkedIn personas</li><li>1 business WhatsApp</li></ul></div>
-      <div class="sat s3"><span class="lbl">Satellite 03</span><ul><li>Own website</li><li>4 email personas</li><li>2 LinkedIn personas</li><li>1 business WhatsApp</li></ul></div>
-      <div class="sat s4 res"><span class="lbl">Reserve</span><ul><li>Own website</li><li>4 email personas</li><li>2 LinkedIn personas</li><li>1 business WhatsApp</li></ul></div>
-    </div>
-    <div class="never">
-      <p class="pull">If anything breaks, the satellite goes down - <span class="g">never you.</span></p>
-      <p class="note">Every satellite brand has its own website, its own email and LinkedIn personas and its own business WhatsApp. 12 mailboxes and 6 LinkedIn profiles in operation, a fourth satellite held in reserve. We run and monitor all of it.</p>
-    </div>
-    <div class="stack-head">
-      <h3>5 layers of infrastructure. You don't have to build any of it.</h3>
-      <p>A robust system of 20+ tools. Months to build. For you: three weeks to launch.</p>
-    </div>
-    <div class="stack">
-      <div class="layer" style="--a:.35"><span class="n">01</span><b>Domains &amp; DNS</b><div class="tools"><span>Cloudflare</span><span>Porkbun</span><span>Mailpool</span></div></div>
-      <div class="layer" style="--a:.5"><span class="n">02</span><b>Mailboxes &amp; sending</b><div class="tools"><span>Google Workspace</span><span>Microsoft 365</span><span>Mailpool</span></div></div>
-      <div class="layer" style="--a:.65"><span class="n">03</span><b>Database &amp; verification</b><div class="tools"><span>Apollo.io</span><span>Cognism</span><span>Sales Navigator</span><span>Google Maps</span><span>Outscraper</span><span>Apify</span><span>PhantomBuster</span><span>Clay</span><span>Hunter</span><span>Million Verifier</span></div></div>
-      <div class="layer" style="--a:.8"><span class="n">04</span><b>Campaigns</b><div class="tools"><span>Smartlead</span><span>Expandi</span><span>Lemlist</span><span>WhatsApp Business API</span><span>Twilio</span></div></div>
-      <div class="layer" style="--a:1"><span class="n">05</span><b>Web, automation, monitoring</b><div class="tools"><span>Lovable</span><span>Vercel</span><span>GitHub</span><span>Make.com</span><span>MailReach</span><span>Google Postmaster</span><span>MXToolbox</span><span>Spamhaus / SURBL</span><span>Notion</span><span>Claude</span></div></div>
-    </div>
-    <p class="small">We master every tool, can hand it over and can train your team on it.</p>
-  </div>
-</section>
-
-<!-- CHAPTER 06 -->
-<div class="chapter" id="ch6" data-chapter="ch6">
-  <div class="wrap"><div class="ch-in"><span class="num" aria-hidden="true">06</span><div><h2>Who</h2><p>Who you'd be working with &#183; Track record &#183; Let's talk</p></div></div></div>
-</div>
-
 <!-- WHO -->
-<section class="who-sec" data-chapter="ch6">
+<section id="who" class="who-sec sec-line" data-chapter="ch4">
   <div class="wrap">
-    <span class="eyebrow">Who you'd be working with</span>
-    <h2>Milan Obetko - Growth Catalyst<br>for CEOs and Founders</h2>
-    <div class="stats who-stats">
-      <div class="stat"><b><span class="count" data-to="20">0</span>+</b><span>Years</span></div>
-      <div class="stat"><b><span class="count" data-to="15">0</span>+</b><span>Markets</span></div>
-      <div class="stat"><b><span class="count" data-to="200">0</span>+</b><span>Projects</span></div>
-    </div>
     <div class="who">
       <div class="photo"><div role="img" aria-label="Milan Obetko"></div></div>
-      <ul>
-        <li>3× International Marketing Lead / CMO, ex Agency Strategy Director</li>
-        <li>Latest: CEE &amp; DACH scale-up, year 1: 9× operating profit, +600% POAS</li>
-      </ul>
-    </div>
-    <div class="creds">
-      <h3>B2B and B2B2C, from franchise to wholesale</h3>
-      <p class="lead2">Twenty years selling to businesses: franchise owners, enterprise clients, installers and distributors. Multi-market teams of 30+ and 30+ agency partnerships.</p>
-      <div class="ctl">
-        <div><span class="yr">2010-2015</span><b>MediaCom / WPP</b><p>Strategy Director, Head of Insight &amp; Beyond Advertising. 200+ integrated B2B and B2C strategies for P&amp;G, Tesco, Coca-Cola, Shell, Danone, UniCredit. Agency #5 to #3, +50% billing, two divisions built from scratch.</p></div>
-        <div><span class="yr">2019-2022</span><b>Subway</b><p>Marketing Director CEE, 13 markets. B2B2C franchise demand: ABM at franchise owners and prospects, trade fairs, live broadcasts, executive sessions, proof-asset library for the sales cycle. CEE +10pts above global.</p></div>
-        <div><span class="yr">2024-2025</span><b>Edimo</b><p>Marketing &amp; Commercial Growth Director, CEE &amp; DACH. Demand engine built from the ground up across 5 markets. Year 1: 9x profit, +600% POAS, +260% leads. Year 2: 3x profit on top.</p></div>
-        <div><span class="yr">2025-2026</span><b>Client under NDA</b><p>Head of Growth. European PV wholesale and technical-products e-commerce: 2x revenue in 12 months, 27 EU markets, six lead-gen destinations, B2B partner program.</p></div>
+      <div class="who-main">
+        <span class="eyebrow">Who you'd be working with</span>
+        <h2>Milan Obetko - Growth Catalyst<br>for CEOs and Founders</h2>
+        <div class="stats who-stats">
+          <div class="stat"><b><span class="count" data-to="20">0</span>+</b><span>Years</span></div>
+          <div class="stat"><b><span class="count" data-to="15">0</span>+</b><span>Markets</span></div>
+          <div class="stat"><b><span class="count" data-to="200">0</span>+</b><span>Projects</span></div>
+        </div>
+        <ul>
+          <li>3× International Marketing Lead / CMO, ex Agency Strategy Director</li>
+          <li>Latest: CEE &amp; DACH scale-up, year 1: 9× operating profit, +600% POAS</li>
+        </ul>
+        <p class="lead2">Twenty years selling to businesses: franchise owners, enterprise clients, installers and distributors. Multi-market teams of 30+ and 30+ agency partnerships.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- DETAILS ON DEMAND -->
+<section id="details" class="sec-line deep" data-chapter="ch5">
+  <div class="wrap">
+    <span class="eyebrow">Details</span>
+
+    <details>
+      <summary><span class="k">Coverage</span><span class="t">The engine scales on two independent axes - you set the scope, nothing else changes</span></summary>
+      <div class="dbody" id="coverage">
+        <div class="axes">
+          <div>
+            <h3><em>1</em>Segment - who you want to reach</h3>
+            <dl class="seg">
+              <div class="r"><dt>Industry</dt><dd>Manufacturing, SaaS, energy, services...</dd><dd class="tag">ANY</dd></div>
+              <div class="r"><dt>Company size</dt><dd>SMB, mid-market, enterprise</dd><dd class="tag">ANY</dd></div>
+              <div class="r"><dt>Buyer persona</dt><dd>Owner, C-level, procurement, technical lead</dd><dd class="tag">ANY</dd></div>
+              <div class="r"><dt>Business model</dt><dd>B2B, B2B2C, channel and partner sales</dd><dd class="tag">ANY</dd></div>
+            </dl>
+          </div>
+          <div>
+            <h3><em>2</em>Geography - how far you want to go</h3>
+            <dl class="geo">
+              <div class="r"><dt>Single Market</dt><dd><i style="width:8%"></i>1 country</dd></div>
+              <div class="r"><dt>CEE</dt><dd><i style="width:24%"></i>8-10 countries</dd></div>
+              <div class="r"><dt>DACH</dt><dd><i style="width:30%"></i>3 countries, 100M+ people</dd></div>
+              <div class="r"><dt>EU</dt><dd><i style="width:46%"></i>27 countries</dd></div>
+              <div class="r"><dt>US + ME</dt><dd><i style="width:58%"></i>2 regions</dd></div>
+              <div class="r"><dt>Global</dt><dd><i style="width:70%"></i>going global</dd></div>
+            </dl>
+          </div>
+        </div>
+        <p class="small">Scope is additive: start in one market, extend without rebuilding.</p>
+        <div class="constants">
+          <b>Constant in every combination</b>
+          <ul class="checks">
+            <li>Market mapped, lists built, data enriched, not bought</li>
+            <li>3-4 channels × 4 weeks × 12 rounds</li>
+            <li>Phased milestones, exit anytime</li>
+          </ul>
+        </div>
+        <p class="pull" style="max-width:none">Segment × geography = the only two decisions you make. <span class="g">Both are reversible.</span></p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="k">The numbers</span><span class="t">Cheaper than the salesperson you're about to hire.</span></summary>
+      <div class="dbody" id="numbers">
+        <div class="tl" role="img" aria-label="Timeline: a new salesperson needs three months to get up to speed, the system is live in 3-5 weeks">
+          <div class="axis"><span></span><div class="ticks"><span>Month 1</span><span>Month 2</span><span>Month 3</span></div></div>
+          <div class="track"><b>Hire a salesperson</b><div class="bars"><div class="ramp">Three months before they're up to speed</div></div></div>
+          <div class="track"><b>This system</b><div class="bars"><div class="build">Build</div><div class="live">Live in 3-5 weeks</div></div></div>
+        </div>
+        <div class="cmp">
+          <div><h3>Hire a salesperson</h3><p class="big3">&#8364;45,000 to &#8364;70,000</p><p class="sub3">a year, fully loaded</p><p>Three months before they're up to speed. Tools and data on top. And when they leave, the contacts leave with them.</p></div>
+          <div class="sys"><h3>This system</h3><p class="big3">Live in 3-5 weeks</p><p class="sub3">then run for you every month</p><p>The entire system, plus 20 years of experience running it. 30-day notice. Success-based fee by agreement. Domains, data and campaigns stay yours.</p></div>
+        </div>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="k">How the engine is built</span><span class="t">We build three more brands around yours.</span></summary>
+      <div class="dbody" id="built">
+        <p class="lead">For outreach to land like it's from a person, not a mass mailer, it needs its own network. We build it and keep it running.</p>
+        <div class="orbit">
+          <svg class="spokes" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+            <line x1="50" y1="50" x2="22" y2="24"/><line x1="50" y1="50" x2="78" y2="24"/><line x1="50" y1="50" x2="22" y2="76"/><line class="d" x1="50" y1="50" x2="78" y2="76"/>
+          </svg>
+          <div class="core"><b>Your brand</b><span>Domain, reputation, primary inbox. Untouched.</span></div>
+          <div class="sat s1"><span class="lbl">Satellite 01</span><ul><li>Own website</li><li>4 email personas</li><li>2 LinkedIn personas</li><li>1 business WhatsApp</li></ul></div>
+          <div class="sat s2"><span class="lbl">Satellite 02</span><ul><li>Own website</li><li>4 email personas</li><li>2 LinkedIn personas</li><li>1 business WhatsApp</li></ul></div>
+          <div class="sat s3"><span class="lbl">Satellite 03</span><ul><li>Own website</li><li>4 email personas</li><li>2 LinkedIn personas</li><li>1 business WhatsApp</li></ul></div>
+          <div class="sat s4 res"><span class="lbl">Reserve</span><ul><li>Own website</li><li>4 email personas</li><li>2 LinkedIn personas</li><li>1 business WhatsApp</li></ul></div>
+        </div>
+        <div class="never">
+          <p class="pull">If anything breaks, the satellite goes down - <span class="g">never you.</span></p>
+          <p class="note">Every satellite brand has its own website, its own email and LinkedIn personas and its own business WhatsApp. 12 mailboxes and 6 LinkedIn profiles in operation, a fourth satellite held in reserve. We run and monitor all of it.</p>
+        </div>
+        <div class="stack-head">
+          <h3>5 layers of infrastructure. You don't have to build any of it.</h3>
+          <p>A robust system of 20+ tools. Months to build. For you: three weeks to launch.</p>
+        </div>
+        <div class="stack">
+          <div class="layer" style="--a:.35"><span class="n">01</span><b>Domains &amp; DNS</b><div class="tools"><span>Cloudflare</span><span>Porkbun</span><span>Mailpool</span></div></div>
+          <div class="layer" style="--a:.5"><span class="n">02</span><b>Mailboxes &amp; sending</b><div class="tools"><span>Google Workspace</span><span>Microsoft 365</span><span>Mailpool</span></div></div>
+          <div class="layer" style="--a:.65"><span class="n">03</span><b>Database &amp; verification</b><div class="tools"><span>Apollo.io</span><span>Cognism</span><span>Sales Navigator</span><span>Google Maps</span><span>Outscraper</span><span>Apify</span><span>PhantomBuster</span><span>Clay</span><span>Hunter</span><span>Million Verifier</span></div></div>
+          <div class="layer" style="--a:.8"><span class="n">04</span><b>Campaigns</b><div class="tools"><span>Smartlead</span><span>Expandi</span><span>Lemlist</span><span>WhatsApp Business API</span><span>Twilio</span></div></div>
+          <div class="layer" style="--a:1"><span class="n">05</span><b>Web, automation, monitoring</b><div class="tools"><span>Lovable</span><span>Vercel</span><span>GitHub</span><span>Make.com</span><span>MailReach</span><span>Google Postmaster</span><span>MXToolbox</span><span>Spamhaus / SURBL</span><span>Notion</span><span>Claude</span></div></div>
+        </div>
+        <p class="small">We master every tool, can hand it over and can train your team on it.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="k">Beyond the engine</span><span class="t">Revenue &amp; Profit Focused Sales System</span></summary>
+      <div class="dbody" id="beyond">
+        <p class="lead">End-to-end business development: from lead to maximising LTV.</p>
+        <p class="bridge">The engine books the meetings. The full system carries every lead through to repeat orders.</p>
+        <div class="rail sys" style="--n:6">
+          <div class="from"><span class="dot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h6l8 9-8 9H5l8-9z"/></svg></span><span class="when">The engine</span><b>Qualified meetings weekly</b></div>
+          <div><span class="dot">01</span><b>Lead segmentation via LPs</b><p>Data collection via forms (qualification)</p></div>
+          <div><span class="dot">02</span><b>Registration &amp; onboarding</b></div>
+          <div><span class="dot">03</span><b>Automation with periodic (or ad-hoc) promotions</b></div>
+          <div><span class="dot">04</span><b>Data collection - business intelligence</b></div>
+          <div><span class="dot">05</span><b>Cross-sell &amp; up-sell</b><p>Repeat purchase driven by tailored/segmented offers that increase LTV</p></div>
+        </div>
+        <div class="band">
+          <div class="bt"><span>Enrichment with friction for engagement, and AI tools/agents for automation</span><b>Human-driven &amp; AI-powered sales system</b></div>
+          <div class="bchev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h6l8 9-8 9H5l8-9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h6l8 9-8 9H5l8-9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h6l8 9-8 9H5l8-9z"/></svg></div>
+        </div>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="k">Track record</span><span class="t">B2B and B2B2C, from franchise to wholesale</span></summary>
+      <div class="dbody">
+        <div class="ctl">
+          <div><span class="yr">2010-2015</span><b>MediaCom / WPP</b><p>Strategy Director, Head of Insight &amp; Beyond Advertising. 200+ integrated B2B and B2C strategies for P&amp;G, Tesco, Coca-Cola, Shell, Danone, UniCredit. Agency #5 to #3, +50% billing, two divisions built from scratch.</p></div>
+          <div><span class="yr">2019-2022</span><b>Subway</b><p>Marketing Director CEE, 13 markets. B2B2C franchise demand: ABM at franchise owners and prospects, trade fairs, live broadcasts, executive sessions, proof-asset library for the sales cycle. CEE +10pts above global.</p></div>
+          <div><span class="yr">2024-2025</span><b>Edimo</b><p>Marketing &amp; Commercial Growth Director, CEE &amp; DACH. Demand engine built from the ground up across 5 markets. Year 1: 9x profit, +600% POAS, +260% leads. Year 2: 3x profit on top.</p></div>
+          <div><span class="yr">2025-2026</span><b>Client under NDA</b><p>Head of Growth. European PV wholesale and technical-products e-commerce: 2x revenue in 12 months, 27 EU markets, six lead-gen destinations, B2B partner program.</p></div>
+        </div>
+      </div>
+    </details>
   </div>
 </section>
 
 <!-- LET'S TALK -->
-<section id="contact" class="contact" data-chapter="ch6">
+<section id="contact" class="contact">
   <div class="wrap">
     <span class="eyebrow">Let's talk</span>
     <h2>Thousands of potential B2B partners don't know you yet. <span class="g">Let's change that.</span></h2>
@@ -969,10 +1032,10 @@ details a{color:var(--white)}
       <h3>30-minute call.</h3>
       <p>Let's discuss your needs and ideal customer/partner profiles. No commitment.</p>
     </div>
-    <div class="btns">
-      <a class="btn" href="mailto:milan.obetko@gmail.com?subject=B2B%20Acquisition%20Engine%20-%2030-minute%20call">Book the call</a>
-      <a class="btn ghost" href="mailto:milan.obetko@gmail.com?subject=B2B%20Acquisition%20Engine%20-%2030-minute%20call">milan.obetko@gmail.com</a>
-      <a class="btn ghost" href="tel:+421911719998">+421 911 719 998</a>
+    <div class="opts">
+      <a class="opt pri" data-cal href="mailto:milan.obetko@gmail.com?subject=B2B%20Acquisition%20Engine%20-%2030-minute%20call"><span class="k">Calendar</span><b>Book the call</b><span class="d">Pick a 30-minute slot.</span></a>
+      <a class="opt" href="mailto:milan.obetko@gmail.com?subject=B2B%20Acquisition%20Engine%20-%2030-minute%20call"><span class="k">E-mail</span><b>milan.obetko@gmail.com</b><span class="d">Opens your e-mail, subject filled in.</span></a>
+      <a class="opt" href="tel:+421911719998"><span class="k">Phone</span><b>+421 911 719 998</b><span class="d">Tap to call.</span></a>
     </div>
     <div class="foot"><span>M&amp;O, s.r.o. · Grow &amp; Prosper · Milan Obetko</span></div>
   </div>
@@ -1018,6 +1081,12 @@ details a{color:var(--white)}
     </div>
   </div>
 </footer>
+
+<nav class="dock" id="dock" aria-label="Contact">
+  <a class="btn" data-cal href="mailto:milan.obetko@gmail.com?subject=B2B%20Acquisition%20Engine%20-%2030-minute%20call">Book the call</a>
+  <a class="btn ghost" href="mailto:milan.obetko@gmail.com?subject=B2B%20Acquisition%20Engine%20-%2030-minute%20call">E-mail</a>
+  <a class="btn ghost" href="tel:+421911719998">Call</a>
+</nav>
 
 <script>
 (function(){
@@ -1107,20 +1176,48 @@ details a{color:var(--white)}
   /* 95 / 5 split bar */
   document.querySelectorAll('.split-bar').forEach(function(s){once(s,function(){s.classList.add('play');},.4);});
 
-  /* ---- chapter nav + progress ---- */
+
+  /* ---- calendar link: paste the booking URL here; while empty, the button opens a pre-filled e-mail ---- */
+  var CALENDAR_URL='';
+  if(CALENDAR_URL){document.querySelectorAll('[data-cal]').forEach(function(a){a.href=CALENDAR_URL;a.target='_blank';a.rel='noopener';});}
+
+  /* ---- tabs ---- */
+  var tabs=[].slice.call(document.querySelectorAll('.tabs [role=tab]'));
+  function pick(i,focus){
+    tabs.forEach(function(t,k){var on=k===i;t.setAttribute('aria-selected',on?'true':'false');t.tabIndex=on?0:-1;document.getElementById(t.getAttribute('aria-controls')).hidden=!on;});
+    if(focus)tabs[i].focus();
+    var b=tabs[i],bar=b.parentNode;bar.scrollTo({left:b.offsetLeft-24,behavior:'smooth'});
+    var nx=document.getElementById('tabNext');nx.innerHTML=(i<tabs.length-1)?('Next: '+tabs[i+1].lastChild.textContent+' &#8594;'):'Back to 01 &#8594;';
+  }
+  function cur(){return tabs.findIndex(function(t){return t.getAttribute('aria-selected')==='true';});}
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){pick(i);});
+    t.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){pick((i+1)%tabs.length,true);e.preventDefault();}if(e.key==='ArrowLeft'){pick((i+tabs.length-1)%tabs.length,true);e.preventDefault();}});
+  });
+  document.getElementById('tabNext').addEventListener('click',function(){
+    pick((cur()+1)%tabs.length);
+    var top=document.querySelector('.tabs').getBoundingClientRect().top;
+    if(top<70||top>window.innerHeight*0.5)window.scrollBy({top:top-84,behavior:'smooth'});
+  });
+  pick(0);
+
+  /* ---- section nav + progress + mobile dock ---- */
   var links={};document.querySelectorAll('.chapnav a').forEach(function(a){links[a.dataset.ch]=a;});
   var secs=[].slice.call(document.querySelectorAll('[data-chapter]'));
   var prog=document.getElementById('progress'), bar=document.getElementById('bar'), nowCh=document.getElementById('nowCh');
+  var dock=document.getElementById('dock'), heroCta=document.getElementById('heroCta'), opts=document.querySelector('.opts');
   function onScroll(){
     var h=document.documentElement, max=h.scrollHeight-h.clientHeight;
     prog.style.width=(max>0?(h.scrollTop/max*100):0)+'%';
-    var y=h.scrollTop+window.innerHeight*0.35, cur=null;
-    secs.forEach(function(s){if(s.getBoundingClientRect().top+h.scrollTop<=y)cur=s.dataset.chapter;});
-    Object.keys(links).forEach(function(k){links[k].classList.toggle('on',k===cur);});
-    bar.classList.toggle('in',!!cur);
-    if(cur&&links[cur])nowCh.textContent=links[cur].textContent.replace(/^(\d\d)/,'$1 ');
+    var y=h.scrollTop+window.innerHeight*0.35, c=null;
+    secs.forEach(function(s){if(s.getBoundingClientRect().top+h.scrollTop<=y)c=s.dataset.chapter;});
+    Object.keys(links).forEach(function(k){links[k].classList.toggle('on',k===c);});
+    bar.classList.toggle('in',!!c);
+    if(c&&links[c])nowCh.textContent=links[c].textContent.replace(/^(\d\d)/,'$1 ');
+    var past=heroCta.getBoundingClientRect().bottom<0, atEnd=opts.getBoundingClientRect().top<window.innerHeight-80;
+    dock.classList.toggle('show',past&&!atEnd);
   }
-  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  window.addEventListener('scroll',onScroll,{passive:true});window.addEventListener('resize',onScroll);onScroll();
 })();
 </script>
 </body>
