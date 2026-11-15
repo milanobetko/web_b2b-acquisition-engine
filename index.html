@@ -96,7 +96,7 @@ section{padding:120px 0}
 @media (max-width:620px){.engine.eh{display:none}.engine.ev{display:block}}
 .engine .path{fill:none;stroke:rgba(201,226,101,.32);stroke-width:1.2}
 .engine .path.d{stroke-dasharray:4 5}
-.engine .sq{fill:rgba(255,255,255,.14)}
+.engine .sq{fill:rgba(255,255,255,.14);transition:fill .5s}
 .engine .sq.on{fill:var(--lime)}
 .engine .out{fill:var(--lime)}
 .engine .outt{font:600 13px var(--f);fill:var(--ink);letter-spacing:.06em;text-transform:uppercase}
@@ -582,7 +582,8 @@ section{padding:88px 0}
         <h1>Own the system,<br>that opens new<br><span class="g">markets.</span></h1>
         <div class="sub">
           <p><b>We build &amp; operate B2B acquisition.</b></p>
-          <p><b>The engine stays yours.</b></p>
+          <p><b>We reach your entire target market.</b></p>
+          <p><b>Your own engine, separate from your existing systems.</b></p>
           <p>You approve. We handle the other 95%.</p>
         </div>
         <div class="cta" id="heroCta">
@@ -1098,11 +1099,21 @@ section{padding:88px 0}
   function engine(id,o){
     var svg=document.getElementById(id);if(!svg)return;
     var gm=svg.querySelector('.g-mkt'),gp=svg.querySelector('.g-paths'),gu=svg.querySelector('.g-pulses');
-    for(var r=0;r<o.rows;r++){for(var c=0;c<o.cols;c++){var i=r*o.cols+c;el('rect',{x:o.gx(c),y:o.gy(r),width:9,height:9,'class':'sq'+(o.lit.indexOf(i)>-1?' on':'')},gm);}}
+    var sqs=[],vis=true;
+    for(var r=0;r<o.rows;r++){for(var c=0;c<o.cols;c++){sqs.push(el('rect',{x:o.gx(c),y:o.gy(r),width:9,height:9,'class':'sq on'},gm));}}
+    /* the mapped market starts full, is worked through square by square, then refills: "the whole list, then again" */
+    function work(){
+      if(!vis){setTimeout(work,600);return;}
+      var on=sqs.filter(function(q){return q.classList.contains('on');});
+      if(!on.length){setTimeout(function(){sqs.forEach(function(q,i){setTimeout(function(){q.classList.add('on');},i*14);});setTimeout(work,sqs.length*14+1400);},1100);return;}
+      on[Math.floor(Math.random()*on.length)].classList.remove('on');
+      setTimeout(work,190);
+    }
+    if(!reduce)setTimeout(work,1400);
     o.paths.forEach(function(p){el('path',{d:p.d,'class':'path'+(p.dash?' d':'')},gp);});
     if(!reduce){
       o.routes.forEach(function(d,k){var c=el('circle',{r:3,'class':'pulse',cx:-20,cy:-20},gu);el('animateMotion',{dur:(3.6+(k%4)*0.5)+'s',repeatCount:'indefinite',begin:(-k*0.45)+'s',path:d,calcMode:'linear'},c);});
-      if('IntersectionObserver' in window&&svg.pauseAnimations){new IntersectionObserver(function(en){en.forEach(function(x){x.isIntersecting?svg.unpauseAnimations():svg.pauseAnimations();});}).observe(svg);}
+      if('IntersectionObserver' in window&&svg.pauseAnimations){new IntersectionObserver(function(en){en.forEach(function(x){vis=x.isIntersecting;x.isIntersecting?svg.unpauseAnimations():svg.pauseAnimations();});}).observe(svg);}
     }
   }
   function link(si,ci){return (si+ci)%2===0||ci===si;}
